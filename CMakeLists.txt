@@ -3,4 +3,4 @@ project(bmp_processing C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(bmp_processing main.c)
+add_executable(bmp_processing main.c cmake-build-debug/CMakeFiles/BitmapInfoHeader.h cmake-build-debug/BitmapInfoHeader.h cmake-build-debug/BitmapFileHeader.h Rgb.h)

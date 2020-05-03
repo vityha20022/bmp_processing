@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles/BitmapInfoHeader.h">
+			<Option target="bmp_processing"/>
+		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/main.c">
 			<Option target="bmp_processing"/>
 		</Unit>
