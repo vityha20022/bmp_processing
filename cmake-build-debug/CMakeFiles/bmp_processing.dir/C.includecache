@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
+
+/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+
+/home/viktor/CLionProjects/bmp_processing/Rgb.h
+
+/home/viktor/CLionProjects/bmp_processing/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+BitmapInfoHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+BitmapFileHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
+Rgb.h
+/home/viktor/CLionProjects/bmp_processing/Rgb.h
+
