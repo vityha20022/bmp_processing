@@ -87,7 +87,37 @@
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/Rgb.h">
 			<Option target="bmp_processing"/>
 		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/angle.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/angle.h">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawLine.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawLine.h">
+			<Option target="bmp_processing"/>
+		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/main.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/printFileHeader.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/printFileHeader.h">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/printInfoHeader.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/printInfoHeader.h">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/valid_coor.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/valid_coor.h">
 			<Option target="bmp_processing"/>
 		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/CMakeLists.txt">

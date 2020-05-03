@@ -12,14 +12,16 @@
 
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
 
+/home/viktor/CLionProjects/bmp_processing/angle.h
+
+/home/viktor/CLionProjects/bmp_processing/drawLine.h
+Rgb.h
+/home/viktor/CLionProjects/bmp_processing/Rgb.h
+
 /home/viktor/CLionProjects/bmp_processing/main.c
 stdio.h
 -
 stdlib.h
--
-string.h
--
-math.h
 -
 BitmapInfoHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
@@ -27,4 +29,24 @@ BitmapFileHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
 Rgb.h
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
+valid_coor.h
+/home/viktor/CLionProjects/bmp_processing/valid_coor.h
+printFileHeader.h
+/home/viktor/CLionProjects/bmp_processing/printFileHeader.h
+printInfoHeader.h
+/home/viktor/CLionProjects/bmp_processing/printInfoHeader.h
+angle.h
+/home/viktor/CLionProjects/bmp_processing/angle.h
+drawLine.h
+/home/viktor/CLionProjects/bmp_processing/drawLine.h
+
+/home/viktor/CLionProjects/bmp_processing/printFileHeader.h
+BitmapFileHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
+
+/home/viktor/CLionProjects/bmp_processing/printInfoHeader.h
+BitmapInfoHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+
+/home/viktor/CLionProjects/bmp_processing/valid_coor.h
 

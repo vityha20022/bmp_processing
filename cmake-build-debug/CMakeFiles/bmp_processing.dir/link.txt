@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/bmp_processing.dir/main.c.o  -o bmp_processing  -lm 
+/usr/bin/cc -g   CMakeFiles/bmp_processing.dir/main.c.o CMakeFiles/bmp_processing.dir/valid_coor.c.o CMakeFiles/bmp_processing.dir/printFileHeader.c.o CMakeFiles/bmp_processing.dir/printInfoHeader.c.o CMakeFiles/bmp_processing.dir/angle.c.o CMakeFiles/bmp_processing.dir/drawLine.c.o  -o bmp_processing  -lm 

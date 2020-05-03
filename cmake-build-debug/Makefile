@@ -123,6 +123,60 @@ bmp_processing/fast:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/build
 .PHONY : bmp_processing/fast
 
+angle.o: angle.c.o
+
+.PHONY : angle.o
+
+# target to build an object file
+angle.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/angle.c.o
+.PHONY : angle.c.o
+
+angle.i: angle.c.i
+
+.PHONY : angle.i
+
+# target to preprocess a source file
+angle.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/angle.c.i
+.PHONY : angle.c.i
+
+angle.s: angle.c.s
+
+.PHONY : angle.s
+
+# target to generate assembly for a file
+angle.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/angle.c.s
+.PHONY : angle.c.s
+
+drawLine.o: drawLine.c.o
+
+.PHONY : drawLine.o
+
+# target to build an object file
+drawLine.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawLine.c.o
+.PHONY : drawLine.c.o
+
+drawLine.i: drawLine.c.i
+
+.PHONY : drawLine.i
+
+# target to preprocess a source file
+drawLine.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawLine.c.i
+.PHONY : drawLine.c.i
+
+drawLine.s: drawLine.c.s
+
+.PHONY : drawLine.s
+
+# target to generate assembly for a file
+drawLine.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawLine.c.s
+.PHONY : drawLine.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -150,6 +204,87 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/main.c.s
 .PHONY : main.c.s
 
+printFileHeader.o: printFileHeader.c.o
+
+.PHONY : printFileHeader.o
+
+# target to build an object file
+printFileHeader.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printFileHeader.c.o
+.PHONY : printFileHeader.c.o
+
+printFileHeader.i: printFileHeader.c.i
+
+.PHONY : printFileHeader.i
+
+# target to preprocess a source file
+printFileHeader.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printFileHeader.c.i
+.PHONY : printFileHeader.c.i
+
+printFileHeader.s: printFileHeader.c.s
+
+.PHONY : printFileHeader.s
+
+# target to generate assembly for a file
+printFileHeader.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printFileHeader.c.s
+.PHONY : printFileHeader.c.s
+
+printInfoHeader.o: printInfoHeader.c.o
+
+.PHONY : printInfoHeader.o
+
+# target to build an object file
+printInfoHeader.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printInfoHeader.c.o
+.PHONY : printInfoHeader.c.o
+
+printInfoHeader.i: printInfoHeader.c.i
+
+.PHONY : printInfoHeader.i
+
+# target to preprocess a source file
+printInfoHeader.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printInfoHeader.c.i
+.PHONY : printInfoHeader.c.i
+
+printInfoHeader.s: printInfoHeader.c.s
+
+.PHONY : printInfoHeader.s
+
+# target to generate assembly for a file
+printInfoHeader.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printInfoHeader.c.s
+.PHONY : printInfoHeader.c.s
+
+valid_coor.o: valid_coor.c.o
+
+.PHONY : valid_coor.o
+
+# target to build an object file
+valid_coor.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/valid_coor.c.o
+.PHONY : valid_coor.c.o
+
+valid_coor.i: valid_coor.c.i
+
+.PHONY : valid_coor.i
+
+# target to preprocess a source file
+valid_coor.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/valid_coor.c.i
+.PHONY : valid_coor.c.i
+
+valid_coor.s: valid_coor.c.s
+
+.PHONY : valid_coor.s
+
+# target to generate assembly for a file
+valid_coor.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/valid_coor.c.s
+.PHONY : valid_coor.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +294,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bmp_processing"
+	@echo "... angle.o"
+	@echo "... angle.i"
+	@echo "... angle.s"
+	@echo "... drawLine.o"
+	@echo "... drawLine.i"
+	@echo "... drawLine.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... printFileHeader.o"
+	@echo "... printFileHeader.i"
+	@echo "... printFileHeader.s"
+	@echo "... printInfoHeader.o"
+	@echo "... printInfoHeader.i"
+	@echo "... printInfoHeader.s"
+	@echo "... valid_coor.o"
+	@echo "... valid_coor.i"
+	@echo "... valid_coor.s"
 .PHONY : help
 
 

@@ -4,7 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/viktor/CLionProjects/bmp_processing/angle.c" "/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles/bmp_processing.dir/angle.c.o"
+  "/home/viktor/CLionProjects/bmp_processing/drawLine.c" "/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles/bmp_processing.dir/drawLine.c.o"
   "/home/viktor/CLionProjects/bmp_processing/main.c" "/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles/bmp_processing.dir/main.c.o"
+  "/home/viktor/CLionProjects/bmp_processing/printFileHeader.c" "/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles/bmp_processing.dir/printFileHeader.c.o"
+  "/home/viktor/CLionProjects/bmp_processing/printInfoHeader.c" "/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles/bmp_processing.dir/printInfoHeader.c.o"
+  "/home/viktor/CLionProjects/bmp_processing/valid_coor.c" "/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles/bmp_processing.dir/valid_coor.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
