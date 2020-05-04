@@ -16,14 +16,14 @@
 int main(){
     FILE *f = fopen("simpsonsvr.bmp", "rb");
     BitmapFileHeader bmfh;
-    BitmapInfoHeader bmif;
+    BitmapInfoHeader bmih;
     fread(&bmfh,1,sizeof(BitmapFileHeader),f);
-    fread(&bmif,1,sizeof(BitmapInfoHeader),f);
+    fread(&bmih, 1, sizeof(BitmapInfoHeader), f);
     printFileHeader(bmfh);
-    printInfoHeader(bmif);
+    printInfoHeader(bmih);
 
-    unsigned int H = bmif.height;
-    unsigned int W = bmif.width;
+    unsigned int H = bmih.height;
+    unsigned int W = bmih.width;
 
     Rgb **arr = malloc(H*sizeof(Rgb*));
     for(int i=0; i<H; i++){
@@ -35,15 +35,15 @@ int main(){
 
     FILE *ff = fopen("out.bmp", "wb");
 
-    bmif.height = H;
-    bmif.width = W;
+    bmih.height = H;
+    bmih.width = W;
     fwrite(&bmfh, 1, sizeof(BitmapFileHeader),ff);
-    fwrite(&bmif, 1, sizeof(BitmapInfoHeader),ff);
+    fwrite(&bmih, 1, sizeof(BitmapInfoHeader), ff);
     unsigned int w = W * sizeof(Rgb) + (W*3)%4;
-    char* color = "green";
-    drawLine(0, 220, 255, 690, arr, color, 210);
-    printf("%f", angle(0, 220, 255, 690));
-    //drawLine(100, 0, 562, 500, arr, color, 5);
+    char* color = "black";
+    drawLine(400, -110, 400, 111110, arr, &bmih, color, 10);
+    printf("%f", angle(0, 10, 0, 0));
+    //drawLine(100, 0, 562, 500, arr, color, 500);
     for(int i=0; i<H; i++){
         fwrite(arr[i],1,w,ff);
     }

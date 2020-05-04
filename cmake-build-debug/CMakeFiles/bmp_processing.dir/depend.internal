@@ -6,6 +6,7 @@ CMakeFiles/bmp_processing.dir/angle.c.o
  /home/viktor/CLionProjects/bmp_processing/angle.h
  /home/viktor/CLionProjects/bmp_processing/valid_coor.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o
+ /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/Rgb.h
  /home/viktor/CLionProjects/bmp_processing/angle.h
  /home/viktor/CLionProjects/bmp_processing/drawLine.c

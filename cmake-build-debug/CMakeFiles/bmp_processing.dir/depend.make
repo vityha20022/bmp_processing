@@ -5,6 +5,7 @@ CMakeFiles/bmp_processing.dir/angle.c.o: ../angle.c
 CMakeFiles/bmp_processing.dir/angle.c.o: ../angle.h
 CMakeFiles/bmp_processing.dir/angle.c.o: ../valid_coor.h
 
+CMakeFiles/bmp_processing.dir/drawLine.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../angle.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../drawLine.c

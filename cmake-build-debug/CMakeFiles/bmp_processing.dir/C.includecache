@@ -17,6 +17,8 @@
 /home/viktor/CLionProjects/bmp_processing/drawLine.h
 Rgb.h
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
+BitmapInfoHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 
 /home/viktor/CLionProjects/bmp_processing/main.c
 stdio.h
