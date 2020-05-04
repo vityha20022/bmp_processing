@@ -40,10 +40,10 @@ int main(){
     fwrite(&bmfh, 1, sizeof(BitmapFileHeader),ff);
     fwrite(&bmih, 1, sizeof(BitmapInfoHeader), ff);
     unsigned int w = W * sizeof(Rgb) + (W*3)%4;
-    char* color = "black";
-    drawLine(400, -110, 400, 111110, arr, &bmih, color, 10);
-    printf("%f", angle(0, 10, 0, 0));
-    //drawLine(100, 0, 562, 500, arr, color, 500);
+    char* color = "purple";
+    drawLine(-100, 1000, 10000, -1000, arr, &bmih, color, 10);
+    printf("%f", angle(0, 10, 0, 0, &bmih));
+    //drawLine(300, 440, 562, 500, arr, &bmih, color, 200);
     for(int i=0; i<H; i++){
         fwrite(arr[i],1,w,ff);
     }

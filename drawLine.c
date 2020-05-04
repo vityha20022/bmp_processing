@@ -8,9 +8,9 @@
 void drawLine(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, char* color, int
 thickness){
     int deltaT = 1;
-    valid(&x1, &y1, &x2, &y2);
+    valid(&x1, &y1, &x2, &y2, bmih);
     const int x_1 = x1, x_2 = x2, y_1 = y1, y_2 = y2;
-    if(angle(x1, y1, x2, y2) <= 135 && angle(x1, y1, x2, y2) >= 45){
+    if(angle(x1, y1, x2, y2, bmih) <= 135 && angle(x1, y1, x2, y2, bmih) >= 45){
         while(thickness != 0){
             const int deltaX = abs(y2 - y1);
             const int deltaY = abs(x2 - x1);
@@ -37,11 +37,11 @@ thickness){
                     cur = rgb_arr_color[i];
                 }
             }
-            if(x2 < bmih -> width && x2 >= 0 && y2 >= 0 && y2 < bmih -> height){
+            if(x2 < (int)bmih -> width && x2 >= 0 && y2 >= 0 && y2 < (int)bmih -> height){
                 arr[y2][x2] = cur;
             }
             while (y1 != y2 || x1 != x2) {
-                if(x1 < bmih -> width && x1 >= 0 && y1 >= 0 && y1 < bmih -> height){
+                if(x1 < (int)bmih -> width && x1 >= 0 && y1 >= 0 && y1 < (int)bmih -> height){
                     arr[y1][x1] = cur;
                 }
                 const int error2 = error * 2;
@@ -77,7 +77,7 @@ thickness){
         }
     }
 
-    if((angle(x1, y1, x2, y2) >= 0 && angle(x1, y1, x2, y2) < 45) || angle(x1, y1, x2, y2) > 135){
+    if((angle(x1, y1, x2, y2, bmih) >= 0 && angle(x1, y1, x2, y2, bmih) < 45) || angle(x1, y1, x2, y2, bmih) > 135){
         while(thickness != 0){
             const int deltaX = abs(y2 - y1);
             const int deltaY = abs(x2 - x1);
@@ -104,11 +104,11 @@ thickness){
                     cur = rgb_arr_color[i];
                 }
             }
-            if(x2 < bmih -> width && x2 >= 0 && y2 >= 0 && y2 < bmih -> height){
+            if(x2 < (int)bmih -> width && x2 >= 0 && y2 >= 0 && y2 < (int)bmih -> height){
                 arr[y2][x2] = cur;
             }
             while (y1 != y2 || x1 != x2) {
-                if(x1 < bmih -> width && x1 >= 0 && y1 >= 0 && y1 < bmih -> height){
+                if(x1 < (int)bmih -> width && x1 >= 0 && y1 >= 0 && y1 < (int)bmih -> height){
                     arr[y1][x1] = cur;
                 }
                 const int error2 = error * 2;

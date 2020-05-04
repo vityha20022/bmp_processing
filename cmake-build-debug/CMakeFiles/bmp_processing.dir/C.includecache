@@ -13,6 +13,8 @@
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
 
 /home/viktor/CLionProjects/bmp_processing/angle.h
+BitmapInfoHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 
 /home/viktor/CLionProjects/bmp_processing/drawLine.h
 Rgb.h
@@ -51,4 +53,6 @@ BitmapInfoHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 
 /home/viktor/CLionProjects/bmp_processing/valid_coor.h
+BitmapInfoHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 
