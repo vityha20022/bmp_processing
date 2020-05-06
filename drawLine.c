@@ -1,5 +1,5 @@
 #include "drawLine.h"
-#include "valid_coor.h"
+#include "validCoorFirst.h"
 #include <stdlib.h>
 #include <string.h>
 #include "angle.h"
@@ -8,7 +8,7 @@
 void drawLine(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, char* color, int
 thickness){
     int deltaT = 1;
-    valid(&x1, &y1, &x2, &y2, bmih);
+    validCoorFirst(&x1, &y1, &x2, &y2, bmih);
     const int x_1 = x1, x_2 = x2, y_1 = y1, y_2 = y2;
     if(angle(x1, y1, x2, y2, bmih) <= 135 && angle(x1, y1, x2, y2, bmih) >= 45){
         while(thickness != 0){

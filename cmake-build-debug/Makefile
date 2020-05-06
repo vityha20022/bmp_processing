@@ -150,6 +150,33 @@ angle.c.s:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/angle.c.s
 .PHONY : angle.c.s
 
+drawCircle.o: drawCircle.c.o
+
+.PHONY : drawCircle.o
+
+# target to build an object file
+drawCircle.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawCircle.c.o
+.PHONY : drawCircle.c.o
+
+drawCircle.i: drawCircle.c.i
+
+.PHONY : drawCircle.i
+
+# target to preprocess a source file
+drawCircle.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawCircle.c.i
+.PHONY : drawCircle.c.i
+
+drawCircle.s: drawCircle.c.s
+
+.PHONY : drawCircle.s
+
+# target to generate assembly for a file
+drawCircle.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawCircle.c.s
+.PHONY : drawCircle.c.s
+
 drawLine.o: drawLine.c.o
 
 .PHONY : drawLine.o
@@ -258,32 +285,59 @@ printInfoHeader.c.s:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printInfoHeader.c.s
 .PHONY : printInfoHeader.c.s
 
-valid_coor.o: valid_coor.c.o
+validCoorFirst.o: validCoorFirst.c.o
 
-.PHONY : valid_coor.o
+.PHONY : validCoorFirst.o
 
 # target to build an object file
-valid_coor.c.o:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/valid_coor.c.o
-.PHONY : valid_coor.c.o
+validCoorFirst.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorFirst.c.o
+.PHONY : validCoorFirst.c.o
 
-valid_coor.i: valid_coor.c.i
+validCoorFirst.i: validCoorFirst.c.i
 
-.PHONY : valid_coor.i
+.PHONY : validCoorFirst.i
 
 # target to preprocess a source file
-valid_coor.c.i:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/valid_coor.c.i
-.PHONY : valid_coor.c.i
+validCoorFirst.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorFirst.c.i
+.PHONY : validCoorFirst.c.i
 
-valid_coor.s: valid_coor.c.s
+validCoorFirst.s: validCoorFirst.c.s
 
-.PHONY : valid_coor.s
+.PHONY : validCoorFirst.s
 
 # target to generate assembly for a file
-valid_coor.c.s:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/valid_coor.c.s
-.PHONY : valid_coor.c.s
+validCoorFirst.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorFirst.c.s
+.PHONY : validCoorFirst.c.s
+
+validCoorSecond.o: validCoorSecond.c.o
+
+.PHONY : validCoorSecond.o
+
+# target to build an object file
+validCoorSecond.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorSecond.c.o
+.PHONY : validCoorSecond.c.o
+
+validCoorSecond.i: validCoorSecond.c.i
+
+.PHONY : validCoorSecond.i
+
+# target to preprocess a source file
+validCoorSecond.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorSecond.c.i
+.PHONY : validCoorSecond.c.i
+
+validCoorSecond.s: validCoorSecond.c.s
+
+.PHONY : validCoorSecond.s
+
+# target to generate assembly for a file
+validCoorSecond.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorSecond.c.s
+.PHONY : validCoorSecond.c.s
 
 # Help Target
 help:
@@ -297,6 +351,9 @@ help:
 	@echo "... angle.o"
 	@echo "... angle.i"
 	@echo "... angle.s"
+	@echo "... drawCircle.o"
+	@echo "... drawCircle.i"
+	@echo "... drawCircle.s"
 	@echo "... drawLine.o"
 	@echo "... drawLine.i"
 	@echo "... drawLine.s"
@@ -309,9 +366,12 @@ help:
 	@echo "... printInfoHeader.o"
 	@echo "... printInfoHeader.i"
 	@echo "... printInfoHeader.s"
-	@echo "... valid_coor.o"
-	@echo "... valid_coor.i"
-	@echo "... valid_coor.s"
+	@echo "... validCoorFirst.o"
+	@echo "... validCoorFirst.i"
+	@echo "... validCoorFirst.s"
+	@echo "... validCoorSecond.o"
+	@echo "... validCoorSecond.i"
+	@echo "... validCoorSecond.s"
 .PHONY : help
 
 

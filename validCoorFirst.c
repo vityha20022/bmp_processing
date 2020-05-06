@@ -1,6 +1,6 @@
-#include "valid_coor.h"
+#include "validCoorFirst.h"
 #include "BitmapInfoHeader.h"
-void valid(int *x1, int *y1, int *x2, int *y2, BitmapInfoHeader *bmih){
+void validCoorFirst(int *x1, int *y1, int *x2, int *y2, BitmapInfoHeader *bmih){
     if (*y1 > (int)(bmih -> height - 1)) {
         *y1 = 0;
     } else{

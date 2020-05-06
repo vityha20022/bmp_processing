@@ -5,24 +5,32 @@ CMakeFiles/bmp_processing.dir/angle.c.o
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/angle.c
  /home/viktor/CLionProjects/bmp_processing/angle.h
- /home/viktor/CLionProjects/bmp_processing/valid_coor.h
+ /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
+CMakeFiles/bmp_processing.dir/drawCircle.c.o
+ /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+ /home/viktor/CLionProjects/bmp_processing/Rgb.h
+ /home/viktor/CLionProjects/bmp_processing/drawCircle.c
+ /home/viktor/CLionProjects/bmp_processing/drawCircle.h
+ /home/viktor/CLionProjects/bmp_processing/drawLine.h
+ /home/viktor/CLionProjects/bmp_processing/validCoorSecond.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/Rgb.h
  /home/viktor/CLionProjects/bmp_processing/angle.h
  /home/viktor/CLionProjects/bmp_processing/drawLine.c
  /home/viktor/CLionProjects/bmp_processing/drawLine.h
- /home/viktor/CLionProjects/bmp_processing/valid_coor.h
+ /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
 CMakeFiles/bmp_processing.dir/main.c.o
  /home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/Rgb.h
  /home/viktor/CLionProjects/bmp_processing/angle.h
+ /home/viktor/CLionProjects/bmp_processing/drawCircle.h
  /home/viktor/CLionProjects/bmp_processing/drawLine.h
  /home/viktor/CLionProjects/bmp_processing/main.c
  /home/viktor/CLionProjects/bmp_processing/printFileHeader.h
  /home/viktor/CLionProjects/bmp_processing/printInfoHeader.h
- /home/viktor/CLionProjects/bmp_processing/valid_coor.h
+ /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
 CMakeFiles/bmp_processing.dir/printFileHeader.c.o
  /home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
  /home/viktor/CLionProjects/bmp_processing/printFileHeader.c
@@ -31,7 +39,11 @@ CMakeFiles/bmp_processing.dir/printInfoHeader.c.o
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/printInfoHeader.c
  /home/viktor/CLionProjects/bmp_processing/printInfoHeader.h
-CMakeFiles/bmp_processing.dir/valid_coor.c.o
+CMakeFiles/bmp_processing.dir/validCoorFirst.c.o
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
- /home/viktor/CLionProjects/bmp_processing/valid_coor.c
- /home/viktor/CLionProjects/bmp_processing/valid_coor.h
+ /home/viktor/CLionProjects/bmp_processing/validCoorFirst.c
+ /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
+CMakeFiles/bmp_processing.dir/validCoorSecond.c.o
+ /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+ /home/viktor/CLionProjects/bmp_processing/validCoorSecond.c
+ /home/viktor/CLionProjects/bmp_processing/validCoorSecond.h

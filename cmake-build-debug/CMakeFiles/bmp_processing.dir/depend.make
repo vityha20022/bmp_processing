@@ -4,24 +4,32 @@
 CMakeFiles/bmp_processing.dir/angle.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/angle.c.o: ../angle.c
 CMakeFiles/bmp_processing.dir/angle.c.o: ../angle.h
-CMakeFiles/bmp_processing.dir/angle.c.o: ../valid_coor.h
+CMakeFiles/bmp_processing.dir/angle.c.o: ../validCoorFirst.h
+
+CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../BitmapInfoHeader.h
+CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../Rgb.h
+CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../drawCircle.c
+CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../drawCircle.h
+CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../drawLine.h
+CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../validCoorSecond.h
 
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../angle.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../drawLine.c
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../drawLine.h
-CMakeFiles/bmp_processing.dir/drawLine.c.o: ../valid_coor.h
+CMakeFiles/bmp_processing.dir/drawLine.c.o: ../validCoorFirst.h
 
 CMakeFiles/bmp_processing.dir/main.c.o: ../BitmapFileHeader.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../angle.h
+CMakeFiles/bmp_processing.dir/main.c.o: ../drawCircle.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../drawLine.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../main.c
 CMakeFiles/bmp_processing.dir/main.c.o: ../printFileHeader.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../printInfoHeader.h
-CMakeFiles/bmp_processing.dir/main.c.o: ../valid_coor.h
+CMakeFiles/bmp_processing.dir/main.c.o: ../validCoorFirst.h
 
 CMakeFiles/bmp_processing.dir/printFileHeader.c.o: ../BitmapFileHeader.h
 CMakeFiles/bmp_processing.dir/printFileHeader.c.o: ../printFileHeader.c
@@ -31,7 +39,11 @@ CMakeFiles/bmp_processing.dir/printInfoHeader.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/printInfoHeader.c.o: ../printInfoHeader.c
 CMakeFiles/bmp_processing.dir/printInfoHeader.c.o: ../printInfoHeader.h
 
-CMakeFiles/bmp_processing.dir/valid_coor.c.o: ../BitmapInfoHeader.h
-CMakeFiles/bmp_processing.dir/valid_coor.c.o: ../valid_coor.c
-CMakeFiles/bmp_processing.dir/valid_coor.c.o: ../valid_coor.h
+CMakeFiles/bmp_processing.dir/validCoorFirst.c.o: ../BitmapInfoHeader.h
+CMakeFiles/bmp_processing.dir/validCoorFirst.c.o: ../validCoorFirst.c
+CMakeFiles/bmp_processing.dir/validCoorFirst.c.o: ../validCoorFirst.h
+
+CMakeFiles/bmp_processing.dir/validCoorSecond.c.o: ../BitmapInfoHeader.h
+CMakeFiles/bmp_processing.dir/validCoorSecond.c.o: ../validCoorSecond.c
+CMakeFiles/bmp_processing.dir/validCoorSecond.c.o: ../validCoorSecond.h
 

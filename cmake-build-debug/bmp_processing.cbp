@@ -93,6 +93,12 @@
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/angle.h">
 			<Option target="bmp_processing"/>
 		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawCircle.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawCircle.h">
+			<Option target="bmp_processing"/>
+		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawLine.c">
 			<Option target="bmp_processing"/>
 		</Unit>
@@ -114,10 +120,16 @@
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/printInfoHeader.h">
 			<Option target="bmp_processing"/>
 		</Unit>
-		<Unit filename="/home/viktor/CLionProjects/bmp_processing/valid_coor.c">
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/validCoorFirst.c">
 			<Option target="bmp_processing"/>
 		</Unit>
-		<Unit filename="/home/viktor/CLionProjects/bmp_processing/valid_coor.h">
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/validCoorFirst.h">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/validCoorSecond.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/validCoorSecond.h">
 			<Option target="bmp_processing"/>
 		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/CMakeLists.txt">

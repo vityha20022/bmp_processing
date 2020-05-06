@@ -70,18 +70,18 @@ CMakeFiles/bmp_processing.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/main.c -o CMakeFiles/bmp_processing.dir/main.c.s
 
-CMakeFiles/bmp_processing.dir/valid_coor.c.o: CMakeFiles/bmp_processing.dir/flags.make
-CMakeFiles/bmp_processing.dir/valid_coor.c.o: ../valid_coor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/bmp_processing.dir/valid_coor.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bmp_processing.dir/valid_coor.c.o   -c /home/viktor/CLionProjects/bmp_processing/valid_coor.c
+CMakeFiles/bmp_processing.dir/validCoorFirst.c.o: CMakeFiles/bmp_processing.dir/flags.make
+CMakeFiles/bmp_processing.dir/validCoorFirst.c.o: ../validCoorFirst.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/bmp_processing.dir/validCoorFirst.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bmp_processing.dir/validCoorFirst.c.o   -c /home/viktor/CLionProjects/bmp_processing/validCoorFirst.c
 
-CMakeFiles/bmp_processing.dir/valid_coor.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp_processing.dir/valid_coor.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/viktor/CLionProjects/bmp_processing/valid_coor.c > CMakeFiles/bmp_processing.dir/valid_coor.c.i
+CMakeFiles/bmp_processing.dir/validCoorFirst.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp_processing.dir/validCoorFirst.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/viktor/CLionProjects/bmp_processing/validCoorFirst.c > CMakeFiles/bmp_processing.dir/validCoorFirst.c.i
 
-CMakeFiles/bmp_processing.dir/valid_coor.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/valid_coor.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/valid_coor.c -o CMakeFiles/bmp_processing.dir/valid_coor.c.s
+CMakeFiles/bmp_processing.dir/validCoorFirst.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/validCoorFirst.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/validCoorFirst.c -o CMakeFiles/bmp_processing.dir/validCoorFirst.c.s
 
 CMakeFiles/bmp_processing.dir/printFileHeader.c.o: CMakeFiles/bmp_processing.dir/flags.make
 CMakeFiles/bmp_processing.dir/printFileHeader.c.o: ../printFileHeader.c
@@ -135,27 +135,57 @@ CMakeFiles/bmp_processing.dir/drawLine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/drawLine.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/drawLine.c -o CMakeFiles/bmp_processing.dir/drawLine.c.s
 
+CMakeFiles/bmp_processing.dir/drawCircle.c.o: CMakeFiles/bmp_processing.dir/flags.make
+CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../drawCircle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/bmp_processing.dir/drawCircle.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bmp_processing.dir/drawCircle.c.o   -c /home/viktor/CLionProjects/bmp_processing/drawCircle.c
+
+CMakeFiles/bmp_processing.dir/drawCircle.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp_processing.dir/drawCircle.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/viktor/CLionProjects/bmp_processing/drawCircle.c > CMakeFiles/bmp_processing.dir/drawCircle.c.i
+
+CMakeFiles/bmp_processing.dir/drawCircle.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/drawCircle.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/drawCircle.c -o CMakeFiles/bmp_processing.dir/drawCircle.c.s
+
+CMakeFiles/bmp_processing.dir/validCoorSecond.c.o: CMakeFiles/bmp_processing.dir/flags.make
+CMakeFiles/bmp_processing.dir/validCoorSecond.c.o: ../validCoorSecond.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/bmp_processing.dir/validCoorSecond.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bmp_processing.dir/validCoorSecond.c.o   -c /home/viktor/CLionProjects/bmp_processing/validCoorSecond.c
+
+CMakeFiles/bmp_processing.dir/validCoorSecond.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp_processing.dir/validCoorSecond.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/viktor/CLionProjects/bmp_processing/validCoorSecond.c > CMakeFiles/bmp_processing.dir/validCoorSecond.c.i
+
+CMakeFiles/bmp_processing.dir/validCoorSecond.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/validCoorSecond.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/validCoorSecond.c -o CMakeFiles/bmp_processing.dir/validCoorSecond.c.s
+
 # Object files for target bmp_processing
 bmp_processing_OBJECTS = \
 "CMakeFiles/bmp_processing.dir/main.c.o" \
-"CMakeFiles/bmp_processing.dir/valid_coor.c.o" \
+"CMakeFiles/bmp_processing.dir/validCoorFirst.c.o" \
 "CMakeFiles/bmp_processing.dir/printFileHeader.c.o" \
 "CMakeFiles/bmp_processing.dir/printInfoHeader.c.o" \
 "CMakeFiles/bmp_processing.dir/angle.c.o" \
-"CMakeFiles/bmp_processing.dir/drawLine.c.o"
+"CMakeFiles/bmp_processing.dir/drawLine.c.o" \
+"CMakeFiles/bmp_processing.dir/drawCircle.c.o" \
+"CMakeFiles/bmp_processing.dir/validCoorSecond.c.o"
 
 # External object files for target bmp_processing
 bmp_processing_EXTERNAL_OBJECTS =
 
 bmp_processing: CMakeFiles/bmp_processing.dir/main.c.o
-bmp_processing: CMakeFiles/bmp_processing.dir/valid_coor.c.o
+bmp_processing: CMakeFiles/bmp_processing.dir/validCoorFirst.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/printFileHeader.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/printInfoHeader.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/angle.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/drawLine.c.o
+bmp_processing: CMakeFiles/bmp_processing.dir/drawCircle.c.o
+bmp_processing: CMakeFiles/bmp_processing.dir/validCoorSecond.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/build.make
 bmp_processing: CMakeFiles/bmp_processing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable bmp_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable bmp_processing"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bmp_processing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

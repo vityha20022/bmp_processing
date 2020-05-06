@@ -3,6 +3,6 @@ project(bmp_processing C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(bmp_processing main.c BitmapFileHeader.h Rgb.h BitmapInfoHeader.h valid_coor.c valid_coor.h printFileHeader.c printFileHeader.h printInfoHeader.c printInfoHeader.h angle.c angle.h drawLine.c drawLine.h)
+add_executable(bmp_processing main.c BitmapFileHeader.h Rgb.h BitmapInfoHeader.h validCoorFirst.c validCoorFirst.h printFileHeader.c printFileHeader.h printInfoHeader.c printInfoHeader.h angle.c angle.h drawLine.c drawLine.h drawCircle.c drawCircle.h validCoorSecond.c validCoorSecond.h)
 
 target_link_libraries(bmp_processing m)
