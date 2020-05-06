@@ -41,8 +41,8 @@ int main(){
     fwrite(&bmih, 1, sizeof(BitmapInfoHeader), ff);
     unsigned int w = W * sizeof(Rgb) + (W*3)%4;
     char* color = "purple";
-    drawLine(-100, 1000, 10000, -1000, arr, &bmih, color, 10);
-    printf("%f", angle(0, 10, 0, 0, &bmih));
+    drawLine(900, 1000, 0, 562, arr, &bmih, color, 1000);
+    printf("%f", angle(300, 1000, 300, -1000, &bmih));
     //drawLine(300, 440, 562, 500, arr, &bmih, color, 200);
     for(int i=0; i<H; i++){
         fwrite(arr[i],1,w,ff);
