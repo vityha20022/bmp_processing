@@ -45,7 +45,7 @@ int main(){
     //drawLine(0, 1000, 0, 562, arr, &bmih, color, 100);
     printf("%f", angle(300, 1000, 300, -1000, &bmih));
     //drawLine(300, 440, 562, 500, arr, &bmih, color, 200);
-    drawCircle(500, 300, 50, arr, &bmih, color);
+    drawCircle(-1400, 1600, 500, arr, &bmih, color);
 
     for(int i = 0; i<H; i++){
         fwrite(arr[i],1,w,ff);

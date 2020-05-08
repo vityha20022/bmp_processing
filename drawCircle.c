@@ -4,8 +4,8 @@
 #include "drawLine.h"
 
 void drawCircle(int x0, int y0, int radius, Rgb **arr, BitmapInfoHeader *bmih, char *color){
-    int radius_counter = radius;
     validCoorSecond(&x0, &y0, bmih);
+
     Rgb cur;
     char *arr_color[] = {"red", "green", "pink", "orange", "blue",
                          "purple", "black", "white", "brown"};
@@ -24,44 +24,26 @@ void drawCircle(int x0, int y0, int radius, Rgb **arr, BitmapInfoHeader *bmih, c
             cur = rgb_arr_color[i];
         }
     }
-    int y = 0;
-    int x = radius;
-    int delta = 1 - 2 * radius;
-    int error = 0;
-    while (x >= 0) {
-        //setPixel(x0 + x, y0 + y);
-        if ((y0 + y) < bmih->height && (y0 + y) >= 0 && (x0 + x) < bmih->width && (x0 + x) >= 0) {
-            arr[y0 + y][x0 + x] = cur;
-        }
-        //setPixel(x0 + x, y0 - y);
-        if ((y0 + y) < bmih->height && (y0 + y) >= 0 && (x0 - x) < bmih->width && (x0 - x) >= 0) {
-            arr[y0 + y][x0 - x] = cur;
-        }
-        //setPixel(x0 - x, y0 + y);
-        if ((y0 - y) < bmih->height && (y0 - y) >= 0 && (x0 + x) < bmih->width && (x0 + x) >= 0) {
-            arr[y0 - y][x0 + x] = cur;
-        }
-        //setPixel(x0 - x, y0 - y);
-        if ((y0 - y) < bmih->height && (y0 - y) >= 0 && (x0 - x) < bmih->width && (x0 - x) >= 0) {
-            arr[y0 - y][x0 - x] = cur;
-        }
-        //drawLine(x0 - x, y0 - y, x0 - x, y0 + y, arr, bmih, color, 1);
 
-        error = 2 * (delta + x) - 1;
-        if (delta < 0 && error <= 0) {
-            ++y;
-            delta += 2 * y + 1;
-            continue;
+
+    int dx = 0;
+    int dy = 0;
+    int square_coord_x = x0 - radius;
+    int square_coord_y = y0 - radius;
+    for (int i = 0; i < 2 * radius; i++){
+        for (int j = 0; j < 2 * radius; j++){
+            dx = x0 - square_coord_x;
+            dy = y0 - square_coord_y;
+            if ((dx * dx + dy * dy) < (radius * radius) && (square_coord_x < (int)bmih -> width && square_coord_x >= 0 && square_coord_y >= 0 && square_coord_y < (int)bmih -> height)){
+                arr[square_coord_y][square_coord_x].r = ~arr[square_coord_y][square_coord_x].r;
+                arr[square_coord_y][square_coord_x].g = ~arr[square_coord_y][square_coord_x].g;
+                arr[square_coord_y][square_coord_x].b = ~arr[square_coord_y][square_coord_x].b;
+            }
+
+            square_coord_y++;
         }
-        error = 2 * (delta - y) - 1;
-        if (delta > 0 && error > 0) {
-            --x;
-            delta += 1 - 2 * x;
-            continue;
-        }
-        ++y;
-        delta += 2 * (y - x);
-        --x;
+        square_coord_y = y0 - radius;
+        square_coord_x++;
     }
 
 
