@@ -74,12 +74,12 @@ clean: CMakeFiles/bmp_processing.dir/clean
 CMakeFiles/bmp_processing.dir/all:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/depend
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target bmp_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target bmp_processing"
 .PHONY : CMakeFiles/bmp_processing.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bmp_processing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bmp_processing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/bmp_processing.dir/rule

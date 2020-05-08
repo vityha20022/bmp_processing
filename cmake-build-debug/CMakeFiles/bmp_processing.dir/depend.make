@@ -6,13 +6,6 @@ CMakeFiles/bmp_processing.dir/angle.c.o: ../angle.c
 CMakeFiles/bmp_processing.dir/angle.c.o: ../angle.h
 CMakeFiles/bmp_processing.dir/angle.c.o: ../validCoorFirst.h
 
-CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../BitmapInfoHeader.h
-CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../Rgb.h
-CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../drawCircle.c
-CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../drawCircle.h
-CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../drawLine.h
-CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../validCoorSecond.h
-
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../angle.h
@@ -20,12 +13,27 @@ CMakeFiles/bmp_processing.dir/drawLine.c.o: ../drawLine.c
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../drawLine.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../validCoorFirst.h
 
+CMakeFiles/bmp_processing.dir/inversion1.c.o: ../BitmapInfoHeader.h
+CMakeFiles/bmp_processing.dir/inversion1.c.o: ../Rgb.h
+CMakeFiles/bmp_processing.dir/inversion1.c.o: ../drawLine.h
+CMakeFiles/bmp_processing.dir/inversion1.c.o: ../inversion1.c
+CMakeFiles/bmp_processing.dir/inversion1.c.o: ../inversion1.h
+CMakeFiles/bmp_processing.dir/inversion1.c.o: ../validCoorSecond.h
+
+CMakeFiles/bmp_processing.dir/inversion2.c.o: ../BitmapInfoHeader.h
+CMakeFiles/bmp_processing.dir/inversion2.c.o: ../Rgb.h
+CMakeFiles/bmp_processing.dir/inversion2.c.o: ../inversion1.h
+CMakeFiles/bmp_processing.dir/inversion2.c.o: ../inversion2.c
+CMakeFiles/bmp_processing.dir/inversion2.c.o: ../inversion2.h
+CMakeFiles/bmp_processing.dir/inversion2.c.o: ../validCoorSecond.h
+
 CMakeFiles/bmp_processing.dir/main.c.o: ../BitmapFileHeader.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../angle.h
-CMakeFiles/bmp_processing.dir/main.c.o: ../drawCircle.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../drawLine.h
+CMakeFiles/bmp_processing.dir/main.c.o: ../inversion1.h
+CMakeFiles/bmp_processing.dir/main.c.o: ../inversion2.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../main.c
 CMakeFiles/bmp_processing.dir/main.c.o: ../printFileHeader.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../printInfoHeader.h

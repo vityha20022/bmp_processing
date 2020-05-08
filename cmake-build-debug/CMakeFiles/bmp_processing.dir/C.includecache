@@ -16,13 +16,19 @@
 BitmapInfoHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 
-/home/viktor/CLionProjects/bmp_processing/drawCircle.h
+/home/viktor/CLionProjects/bmp_processing/drawLine.h
+Rgb.h
+/home/viktor/CLionProjects/bmp_processing/Rgb.h
+BitmapInfoHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+
+/home/viktor/CLionProjects/bmp_processing/inversion1.h
 BitmapInfoHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 Rgb.h
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
 
-/home/viktor/CLionProjects/bmp_processing/drawLine.h
+/home/viktor/CLionProjects/bmp_processing/inversion2.h
 Rgb.h
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
 BitmapInfoHeader.h
@@ -49,8 +55,10 @@ angle.h
 /home/viktor/CLionProjects/bmp_processing/angle.h
 drawLine.h
 /home/viktor/CLionProjects/bmp_processing/drawLine.h
-drawCircle.h
-/home/viktor/CLionProjects/bmp_processing/drawCircle.h
+inversion1.h
+/home/viktor/CLionProjects/bmp_processing/inversion1.h
+inversion2.h
+/home/viktor/CLionProjects/bmp_processing/inversion2.h
 
 /home/viktor/CLionProjects/bmp_processing/printFileHeader.h
 BitmapFileHeader.h

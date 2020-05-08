@@ -93,16 +93,22 @@
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/angle.h">
 			<Option target="bmp_processing"/>
 		</Unit>
-		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawCircle.c">
-			<Option target="bmp_processing"/>
-		</Unit>
-		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawCircle.h">
-			<Option target="bmp_processing"/>
-		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawLine.c">
 			<Option target="bmp_processing"/>
 		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawLine.h">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/inversion1.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/inversion1.h">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/inversion2.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/inversion2.h">
 			<Option target="bmp_processing"/>
 		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/main.c">

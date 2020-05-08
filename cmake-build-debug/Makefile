@@ -150,33 +150,6 @@ angle.c.s:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/angle.c.s
 .PHONY : angle.c.s
 
-drawCircle.o: drawCircle.c.o
-
-.PHONY : drawCircle.o
-
-# target to build an object file
-drawCircle.c.o:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawCircle.c.o
-.PHONY : drawCircle.c.o
-
-drawCircle.i: drawCircle.c.i
-
-.PHONY : drawCircle.i
-
-# target to preprocess a source file
-drawCircle.c.i:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawCircle.c.i
-.PHONY : drawCircle.c.i
-
-drawCircle.s: drawCircle.c.s
-
-.PHONY : drawCircle.s
-
-# target to generate assembly for a file
-drawCircle.c.s:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawCircle.c.s
-.PHONY : drawCircle.c.s
-
 drawLine.o: drawLine.c.o
 
 .PHONY : drawLine.o
@@ -203,6 +176,60 @@ drawLine.s: drawLine.c.s
 drawLine.c.s:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/drawLine.c.s
 .PHONY : drawLine.c.s
+
+inversion1.o: inversion1.c.o
+
+.PHONY : inversion1.o
+
+# target to build an object file
+inversion1.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/inversion1.c.o
+.PHONY : inversion1.c.o
+
+inversion1.i: inversion1.c.i
+
+.PHONY : inversion1.i
+
+# target to preprocess a source file
+inversion1.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/inversion1.c.i
+.PHONY : inversion1.c.i
+
+inversion1.s: inversion1.c.s
+
+.PHONY : inversion1.s
+
+# target to generate assembly for a file
+inversion1.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/inversion1.c.s
+.PHONY : inversion1.c.s
+
+inversion2.o: inversion2.c.o
+
+.PHONY : inversion2.o
+
+# target to build an object file
+inversion2.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/inversion2.c.o
+.PHONY : inversion2.c.o
+
+inversion2.i: inversion2.c.i
+
+.PHONY : inversion2.i
+
+# target to preprocess a source file
+inversion2.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/inversion2.c.i
+.PHONY : inversion2.c.i
+
+inversion2.s: inversion2.c.s
+
+.PHONY : inversion2.s
+
+# target to generate assembly for a file
+inversion2.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/inversion2.c.s
+.PHONY : inversion2.c.s
 
 main.o: main.c.o
 
@@ -351,12 +378,15 @@ help:
 	@echo "... angle.o"
 	@echo "... angle.i"
 	@echo "... angle.s"
-	@echo "... drawCircle.o"
-	@echo "... drawCircle.i"
-	@echo "... drawCircle.s"
 	@echo "... drawLine.o"
 	@echo "... drawLine.i"
 	@echo "... drawLine.s"
+	@echo "... inversion1.o"
+	@echo "... inversion1.i"
+	@echo "... inversion1.s"
+	@echo "... inversion2.o"
+	@echo "... inversion2.i"
+	@echo "... inversion2.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

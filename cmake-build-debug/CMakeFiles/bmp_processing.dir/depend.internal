@@ -6,13 +6,6 @@ CMakeFiles/bmp_processing.dir/angle.c.o
  /home/viktor/CLionProjects/bmp_processing/angle.c
  /home/viktor/CLionProjects/bmp_processing/angle.h
  /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
-CMakeFiles/bmp_processing.dir/drawCircle.c.o
- /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
- /home/viktor/CLionProjects/bmp_processing/Rgb.h
- /home/viktor/CLionProjects/bmp_processing/drawCircle.c
- /home/viktor/CLionProjects/bmp_processing/drawCircle.h
- /home/viktor/CLionProjects/bmp_processing/drawLine.h
- /home/viktor/CLionProjects/bmp_processing/validCoorSecond.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/Rgb.h
@@ -20,13 +13,28 @@ CMakeFiles/bmp_processing.dir/drawLine.c.o
  /home/viktor/CLionProjects/bmp_processing/drawLine.c
  /home/viktor/CLionProjects/bmp_processing/drawLine.h
  /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
+CMakeFiles/bmp_processing.dir/inversion1.c.o
+ /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+ /home/viktor/CLionProjects/bmp_processing/Rgb.h
+ /home/viktor/CLionProjects/bmp_processing/drawLine.h
+ /home/viktor/CLionProjects/bmp_processing/inversion1.c
+ /home/viktor/CLionProjects/bmp_processing/inversion1.h
+ /home/viktor/CLionProjects/bmp_processing/validCoorSecond.h
+CMakeFiles/bmp_processing.dir/inversion2.c.o
+ /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+ /home/viktor/CLionProjects/bmp_processing/Rgb.h
+ /home/viktor/CLionProjects/bmp_processing/inversion1.h
+ /home/viktor/CLionProjects/bmp_processing/inversion2.c
+ /home/viktor/CLionProjects/bmp_processing/inversion2.h
+ /home/viktor/CLionProjects/bmp_processing/validCoorSecond.h
 CMakeFiles/bmp_processing.dir/main.c.o
  /home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/Rgb.h
  /home/viktor/CLionProjects/bmp_processing/angle.h
- /home/viktor/CLionProjects/bmp_processing/drawCircle.h
  /home/viktor/CLionProjects/bmp_processing/drawLine.h
+ /home/viktor/CLionProjects/bmp_processing/inversion1.h
+ /home/viktor/CLionProjects/bmp_processing/inversion2.h
  /home/viktor/CLionProjects/bmp_processing/main.c
  /home/viktor/CLionProjects/bmp_processing/printFileHeader.h
  /home/viktor/CLionProjects/bmp_processing/printInfoHeader.h

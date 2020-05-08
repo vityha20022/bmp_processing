@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/bmp_processing.dir/angle.c.o"
-  "CMakeFiles/bmp_processing.dir/drawCircle.c.o"
   "CMakeFiles/bmp_processing.dir/drawLine.c.o"
+  "CMakeFiles/bmp_processing.dir/inversion1.c.o"
+  "CMakeFiles/bmp_processing.dir/inversion2.c.o"
   "CMakeFiles/bmp_processing.dir/main.c.o"
   "CMakeFiles/bmp_processing.dir/printFileHeader.c.o"
   "CMakeFiles/bmp_processing.dir/printInfoHeader.c.o"

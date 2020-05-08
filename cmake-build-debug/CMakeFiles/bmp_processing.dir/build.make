@@ -135,18 +135,18 @@ CMakeFiles/bmp_processing.dir/drawLine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/drawLine.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/drawLine.c -o CMakeFiles/bmp_processing.dir/drawLine.c.s
 
-CMakeFiles/bmp_processing.dir/drawCircle.c.o: CMakeFiles/bmp_processing.dir/flags.make
-CMakeFiles/bmp_processing.dir/drawCircle.c.o: ../drawCircle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/bmp_processing.dir/drawCircle.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bmp_processing.dir/drawCircle.c.o   -c /home/viktor/CLionProjects/bmp_processing/drawCircle.c
+CMakeFiles/bmp_processing.dir/inversion1.c.o: CMakeFiles/bmp_processing.dir/flags.make
+CMakeFiles/bmp_processing.dir/inversion1.c.o: ../inversion1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/bmp_processing.dir/inversion1.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bmp_processing.dir/inversion1.c.o   -c /home/viktor/CLionProjects/bmp_processing/inversion1.c
 
-CMakeFiles/bmp_processing.dir/drawCircle.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp_processing.dir/drawCircle.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/viktor/CLionProjects/bmp_processing/drawCircle.c > CMakeFiles/bmp_processing.dir/drawCircle.c.i
+CMakeFiles/bmp_processing.dir/inversion1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp_processing.dir/inversion1.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/viktor/CLionProjects/bmp_processing/inversion1.c > CMakeFiles/bmp_processing.dir/inversion1.c.i
 
-CMakeFiles/bmp_processing.dir/drawCircle.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/drawCircle.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/drawCircle.c -o CMakeFiles/bmp_processing.dir/drawCircle.c.s
+CMakeFiles/bmp_processing.dir/inversion1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/inversion1.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/inversion1.c -o CMakeFiles/bmp_processing.dir/inversion1.c.s
 
 CMakeFiles/bmp_processing.dir/validCoorSecond.c.o: CMakeFiles/bmp_processing.dir/flags.make
 CMakeFiles/bmp_processing.dir/validCoorSecond.c.o: ../validCoorSecond.c
@@ -161,6 +161,19 @@ CMakeFiles/bmp_processing.dir/validCoorSecond.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/validCoorSecond.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/validCoorSecond.c -o CMakeFiles/bmp_processing.dir/validCoorSecond.c.s
 
+CMakeFiles/bmp_processing.dir/inversion2.c.o: CMakeFiles/bmp_processing.dir/flags.make
+CMakeFiles/bmp_processing.dir/inversion2.c.o: ../inversion2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/bmp_processing.dir/inversion2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bmp_processing.dir/inversion2.c.o   -c /home/viktor/CLionProjects/bmp_processing/inversion2.c
+
+CMakeFiles/bmp_processing.dir/inversion2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp_processing.dir/inversion2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/viktor/CLionProjects/bmp_processing/inversion2.c > CMakeFiles/bmp_processing.dir/inversion2.c.i
+
+CMakeFiles/bmp_processing.dir/inversion2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_processing.dir/inversion2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/viktor/CLionProjects/bmp_processing/inversion2.c -o CMakeFiles/bmp_processing.dir/inversion2.c.s
+
 # Object files for target bmp_processing
 bmp_processing_OBJECTS = \
 "CMakeFiles/bmp_processing.dir/main.c.o" \
@@ -169,8 +182,9 @@ bmp_processing_OBJECTS = \
 "CMakeFiles/bmp_processing.dir/printInfoHeader.c.o" \
 "CMakeFiles/bmp_processing.dir/angle.c.o" \
 "CMakeFiles/bmp_processing.dir/drawLine.c.o" \
-"CMakeFiles/bmp_processing.dir/drawCircle.c.o" \
-"CMakeFiles/bmp_processing.dir/validCoorSecond.c.o"
+"CMakeFiles/bmp_processing.dir/inversion1.c.o" \
+"CMakeFiles/bmp_processing.dir/validCoorSecond.c.o" \
+"CMakeFiles/bmp_processing.dir/inversion2.c.o"
 
 # External object files for target bmp_processing
 bmp_processing_EXTERNAL_OBJECTS =
@@ -181,11 +195,12 @@ bmp_processing: CMakeFiles/bmp_processing.dir/printFileHeader.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/printInfoHeader.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/angle.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/drawLine.c.o
-bmp_processing: CMakeFiles/bmp_processing.dir/drawCircle.c.o
+bmp_processing: CMakeFiles/bmp_processing.dir/inversion1.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/validCoorSecond.c.o
+bmp_processing: CMakeFiles/bmp_processing.dir/inversion2.c.o
 bmp_processing: CMakeFiles/bmp_processing.dir/build.make
 bmp_processing: CMakeFiles/bmp_processing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable bmp_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/viktor/CLionProjects/bmp_processing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable bmp_processing"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bmp_processing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
