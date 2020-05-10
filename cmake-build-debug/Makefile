@@ -150,6 +150,33 @@ angle.c.s:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/angle.c.s
 .PHONY : angle.c.s
 
+cropping.o: cropping.c.o
+
+.PHONY : cropping.o
+
+# target to build an object file
+cropping.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/cropping.c.o
+.PHONY : cropping.c.o
+
+cropping.i: cropping.c.i
+
+.PHONY : cropping.i
+
+# target to preprocess a source file
+cropping.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/cropping.c.i
+.PHONY : cropping.c.i
+
+cropping.s: cropping.c.s
+
+.PHONY : cropping.s
+
+# target to generate assembly for a file
+cropping.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/cropping.c.s
+.PHONY : cropping.c.s
+
 drawLine.o: drawLine.c.o
 
 .PHONY : drawLine.o
@@ -378,6 +405,9 @@ help:
 	@echo "... angle.o"
 	@echo "... angle.i"
 	@echo "... angle.s"
+	@echo "... cropping.o"
+	@echo "... cropping.i"
+	@echo "... cropping.s"
 	@echo "... drawLine.o"
 	@echo "... drawLine.i"
 	@echo "... drawLine.s"

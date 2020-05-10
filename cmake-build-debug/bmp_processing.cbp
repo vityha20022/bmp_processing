@@ -93,6 +93,12 @@
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/angle.h">
 			<Option target="bmp_processing"/>
 		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/cropping.c">
+			<Option target="bmp_processing"/>
+		</Unit>
+		<Unit filename="/home/viktor/CLionProjects/bmp_processing/cropping.h">
+			<Option target="bmp_processing"/>
+		</Unit>
 		<Unit filename="/home/viktor/CLionProjects/bmp_processing/drawLine.c">
 			<Option target="bmp_processing"/>
 		</Unit>

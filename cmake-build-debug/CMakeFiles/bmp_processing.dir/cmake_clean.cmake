@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/bmp_processing.dir/angle.c.o"
+  "CMakeFiles/bmp_processing.dir/cropping.c.o"
   "CMakeFiles/bmp_processing.dir/drawLine.c.o"
   "CMakeFiles/bmp_processing.dir/inversion1.c.o"
   "CMakeFiles/bmp_processing.dir/inversion2.c.o"

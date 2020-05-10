@@ -6,6 +6,13 @@ CMakeFiles/bmp_processing.dir/angle.c.o: ../angle.c
 CMakeFiles/bmp_processing.dir/angle.c.o: ../angle.h
 CMakeFiles/bmp_processing.dir/angle.c.o: ../validCoorFirst.h
 
+CMakeFiles/bmp_processing.dir/cropping.c.o: ../BitmapFileHeader.h
+CMakeFiles/bmp_processing.dir/cropping.c.o: ../BitmapInfoHeader.h
+CMakeFiles/bmp_processing.dir/cropping.c.o: ../Rgb.h
+CMakeFiles/bmp_processing.dir/cropping.c.o: ../cropping.c
+CMakeFiles/bmp_processing.dir/cropping.c.o: ../cropping.h
+CMakeFiles/bmp_processing.dir/cropping.c.o: ../validCoorFirst.h
+
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../angle.h
@@ -31,6 +38,7 @@ CMakeFiles/bmp_processing.dir/main.c.o: ../BitmapFileHeader.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../angle.h
+CMakeFiles/bmp_processing.dir/main.c.o: ../cropping.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../drawLine.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../inversion1.h
 CMakeFiles/bmp_processing.dir/main.c.o: ../inversion2.h

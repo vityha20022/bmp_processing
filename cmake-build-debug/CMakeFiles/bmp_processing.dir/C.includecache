@@ -16,6 +16,14 @@
 BitmapInfoHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 
+/home/viktor/CLionProjects/bmp_processing/cropping.h
+BitmapInfoHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+Rgb.h
+/home/viktor/CLionProjects/bmp_processing/Rgb.h
+BitmapFileHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
+
 /home/viktor/CLionProjects/bmp_processing/drawLine.h
 Rgb.h
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
@@ -59,6 +67,8 @@ inversion1.h
 /home/viktor/CLionProjects/bmp_processing/inversion1.h
 inversion2.h
 /home/viktor/CLionProjects/bmp_processing/inversion2.h
+cropping.h
+/home/viktor/CLionProjects/bmp_processing/cropping.h
 
 /home/viktor/CLionProjects/bmp_processing/printFileHeader.h
 BitmapFileHeader.h
