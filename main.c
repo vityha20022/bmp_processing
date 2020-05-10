@@ -58,7 +58,7 @@ int main(){
     }*/
     //fwrite(&bmfh, 1, sizeof(BitmapFileHeader),ff);
     //fwrite(&bmih, 1, sizeof(BitmapInfoHeader), ff);
-    cropping(-1000,     389, 500, 99995, arr, &bmih, &bmfh, f);
+    cropping(324,247,458, 363, arr, &bmih, &bmfh, f);
 
     //fclose(ff);
     printf("\n");

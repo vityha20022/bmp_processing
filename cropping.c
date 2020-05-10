@@ -19,7 +19,13 @@ void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih,
     }
     unsigned int H = (y1 - y2);
     unsigned int W = (x2 - x1);
-    int w2 = ((int)bmih -> width - x1) * sizeof(Rgb) + (((int)bmih -> width * 3) % 4);
+
+    int w2;
+    if (((int)bmih -> width - x1) * sizeof(Rgb) % 4 != 0) {
+        w2 = ((int)bmih -> width - x1) * sizeof(Rgb) + (4 - ((((int)bmih -> width - x1) * 3) % 4));
+    } else{
+        w2 = (int)(bmih -> width - x1) * sizeof(Rgb);
+    }
     char* buf;
     for (int k = 0; k < y2; k++){
         arr[k] = malloc(bmih -> width * sizeof(Rgb) + ((bmih -> width * 3) % 4));
@@ -29,7 +35,7 @@ void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih,
     }
     for(int i = 0; i < H; i++){
         arr[i] = malloc(w2);
-        buf = malloc(w2);
+        buf = malloc(x1 * 3);
         fread(buf, 1, x1 * 3, f);
         fread(arr[i], 1, w2, f);
         free(buf);
