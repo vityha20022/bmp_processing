@@ -37,8 +37,7 @@ int main(){
 
     //FILE *ff = fopen("out.bmp", "wb");
 
-    bmih.height = H;
-    bmih.width = W;
+
     unsigned int w = W * sizeof(Rgb) + (W * 3)%4;
     char* color = "black";
     char* buf = malloc(1000 * 10);
@@ -58,7 +57,13 @@ int main(){
     }*/
     //fwrite(&bmfh, 1, sizeof(BitmapFileHeader),ff);
     //fwrite(&bmih, 1, sizeof(BitmapInfoHeader), ff);
-    cropping(324,247,458, 363, arr, &bmih, &bmfh, f);
+    //cropping(0,0,500, 500, arr, &bmih, &bmfh, f);
+    //inversion2(0, 0, 200, 200, arr, &bmih, &bmfh, f);
+    inversion1(100, 100, 200, arr, &bmih);
+    //cropping(0,0,1000, 4200, arr, &bmih, &bmfh, f);
+    //cropping(0,0,200, 200, arr, &bmih, &bmfh, f);
+    //cropping(-100, -100, 150, 150, arr, &bmih, &bmfh, f);
+
 
     //fclose(ff);
     printf("\n");

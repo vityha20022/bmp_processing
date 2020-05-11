@@ -5,7 +5,13 @@
 #include "stdlib.h"
 
 
-void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih){
+void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
+    int W = 0;
+    if ((int)bmih -> width * sizeof(Rgb) % 4 != 0){
+        W = ((int)bmih -> width * sizeof(Rgb) + (4 - ((int)bmih -> width * 3) % 4));
+    } else {
+        W = (int)bmih -> width * sizeof(Rgb);
+    }
     y1 = (int)(bmih -> height - 1) - y1;
     y2 = (int)(bmih -> height - 1) - y2;
     int dx = x2 - x1;
@@ -37,4 +43,15 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
         square_coord_y = y0 - radius;
         square_coord_x++;
     }
+    FILE *out_file = fopen("out.bmp", "wb");
+    fwrite(bmfh, 1, sizeof(BitmapFileHeader),out_file);
+    fwrite(bmih, 1, sizeof(BitmapInfoHeader), out_file);
+    for (int i = 0; i < bmih -> height; i++){
+        fwrite(arr[i], 1,W, out_file);
+    }
+    fclose(f);
+    /*f = fopen("out.bmp", "rb");
+    fread(bmfh,1,sizeof(BitmapFileHeader),f);
+    fread(bmih, 1, sizeof(BitmapInfoHeader), f);*/
+    fclose(out_file);
 }

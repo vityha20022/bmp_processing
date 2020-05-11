@@ -27,6 +27,7 @@ CMakeFiles/bmp_processing.dir/inversion1.c.o: ../inversion1.c
 CMakeFiles/bmp_processing.dir/inversion1.c.o: ../inversion1.h
 CMakeFiles/bmp_processing.dir/inversion1.c.o: ../validCoorSecond.h
 
+CMakeFiles/bmp_processing.dir/inversion2.c.o: ../BitmapFileHeader.h
 CMakeFiles/bmp_processing.dir/inversion2.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/inversion2.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/inversion2.c.o: ../inversion1.h
