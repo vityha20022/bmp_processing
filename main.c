@@ -16,26 +16,28 @@
 
 
 int main(){
-    FILE *f = fopen("simpsonsvr.bmp", "rb");
+    FILE *f = fopen("bar.bmp", "rb");
     BitmapFileHeader bmfh;
     BitmapInfoHeader bmih;
     fread(&bmfh,1,sizeof(BitmapFileHeader),f);
     fread(&bmih, 1, sizeof(BitmapInfoHeader), f);
+    if (bmih.headerSize != 40 || bmih.bitsPerPixel != 24){
+        printf("This BMP file format is not defined");
+        return 0;
+    }
     printFileHeader(bmfh);
     printInfoHeader(bmih);
 
 
 
-    Rgb **arr = malloc(bmih.height*sizeof(Rgb*));
+    Rgb **arr = calloc(bmih.height*sizeof(Rgb*), 1);
 
     char* color = "black";
 
-    drawLine(300, 440, 562, 500, arr, color, 200, &bmih, &bmfh, f);
-    cropping(0,0,500, 200, arr, &bmih, &bmfh, f);
-    drawLine(300, 440, 562, 500, arr, color, 200, &bmih, &bmfh, f);
-    inversion1(300, 60, 200, arr, &bmih, &bmfh, f);
-    drawLine(0, 0, 562, 500, arr, "pink", 200, &bmih, &bmfh, f);
-    drawLine(0, 10000, 562, 0, arr, "purple", 100, &bmih, &bmfh, f);
+    drawLine(0, 0, 156, 256, arr, color, 200, &bmih, &bmfh, f);
+    inversion1(100, 100, 1000, arr, &bmih, &bmfh, f);
+    inversion2(2000, 2000, 3000, 3000, arr, &bmih, &bmfh, f);
+    cropping(0, 0, 256, 128, arr, &bmih, &bmfh, f);
 
     printf("\n");
     printFileHeader(bmfh);

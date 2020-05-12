@@ -5,7 +5,7 @@
 #include "stdio.h"
 
 void inversion1(int x0, int y0, int radius, Rgb **arr, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
-    validCoorSecond(&x0, &y0, bmih);
+    y0 = (int)(bmih -> height - 1) - y0;
     int W = 0;
     if ((int)bmih -> width * sizeof(Rgb) % 4 != 0){
         W = ((int)bmih -> width * sizeof(Rgb) + (4 - ((int)bmih -> width * 3) % 4));
@@ -13,7 +13,7 @@ void inversion1(int x0, int y0, int radius, Rgb **arr, BitmapInfoHeader *bmih, B
         W = (int)bmih -> width * sizeof(Rgb);
     }
     for (int k = 0; k < bmih -> height; k++){
-        arr[k] = malloc(W);
+        arr[k] = calloc(W, 1);
         fread(arr[k],1, W, f);
     }
     int dx = 0;

@@ -9,7 +9,8 @@
 void drawLine(int x1, int y1, int x2, int y2, Rgb **arr, char* color, int
 thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
     int deltaT = 1;
-    validCoorFirst(&x1, &y1, &x2, &y2, bmih);
+    y1 = (int)(bmih -> height - 1) - y1;
+    y2 = (int)(bmih -> height - 1) - y2;
     int W = 0;
     if ((int)bmih -> width * sizeof(Rgb) % 4 != 0){
         W = ((int)bmih -> width * sizeof(Rgb) + (4 - ((int)bmih -> width * 3) % 4));
@@ -17,7 +18,7 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
         W = (int)bmih -> width * sizeof(Rgb);
     }
     for (int k = 0; k < bmih -> height; k++){
-        arr[k] = malloc(W);
+        arr[k] = calloc(W, 1);
         fread(arr[k],1, W, f);
     }
     const int x_1 = x1, x_2 = x2, y_1 = y1, y_2 = y2;

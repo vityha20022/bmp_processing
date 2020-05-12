@@ -13,7 +13,7 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
         W = (int)bmih -> width * sizeof(Rgb);
     }
     for (int k = 0; k < bmih -> height; k++){
-        arr[k] = malloc(W);
+        arr[k] = calloc(W, 1);
         fread(arr[k],1, W, f);
     }
     y1 = (int)(bmih -> height - 1) - y1;

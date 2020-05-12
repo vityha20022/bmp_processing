@@ -1,4 +1,3 @@
-#include <bits/types/FILE.h>
 #include "cropping.h"
 #include "stdio.h"
 #include "validCoorFirst.h"
@@ -33,12 +32,12 @@ void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih,
     }
     char* buf;
     for (int k = 0; k < y2; k++){
-        buf = malloc(w3);
+        buf = calloc(w3, 1);
         fread(buf, 1, w3, f);
         free(buf);
     }
     for(int i = 0; i < H; i++){
-        arr[i] = malloc(w2);
+        arr[i] = calloc(w2, 1);
         buf = malloc(x1 * 3);
         fread(buf, 1, x1 * 3, f);
         fread(arr[i], 1, w2, f);
