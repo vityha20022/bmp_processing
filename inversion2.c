@@ -12,6 +12,10 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
     } else {
         W = (int)bmih -> width * sizeof(Rgb);
     }
+    for (int k = 0; k < bmih -> height; k++){
+        arr[k] = malloc(W);
+        fread(arr[k],1, W, f);
+    }
     y1 = (int)(bmih -> height - 1) - y1;
     y2 = (int)(bmih -> height - 1) - y2;
     int dx = x2 - x1;
@@ -19,7 +23,7 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
     int radius = dx / 2;
     int x0 = x1 + radius;
     int y0 = y1 - radius;
-    //validCoorSecond(&x0, &y0, bmih);
+
     if (abs(dx) != abs(dy) || x1 > x2 || y2 > y1){
         printf("you entered invalid coordinates\n");
         return;
@@ -50,8 +54,11 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
         fwrite(arr[i], 1,W, out_file);
     }
     fclose(f);
-    /*f = fopen("out.bmp", "rb");
+    for (int k = 0; k < bmih -> height; k++){
+        free(arr[k]);
+    }
+    f = fopen("out.bmp", "rb");
     fread(bmfh,1,sizeof(BitmapFileHeader),f);
-    fread(bmih, 1, sizeof(BitmapInfoHeader), f);*/
+    fread(bmih, 1, sizeof(BitmapInfoHeader), f);
     fclose(out_file);
 }

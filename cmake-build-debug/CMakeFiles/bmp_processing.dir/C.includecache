@@ -25,16 +25,24 @@ BitmapFileHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
 
 /home/viktor/CLionProjects/bmp_processing/drawLine.h
+bits/types/FILE.h
+-
 Rgb.h
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
 BitmapInfoHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+BitmapFileHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
 
 /home/viktor/CLionProjects/bmp_processing/inversion1.h
+bits/types/FILE.h
+-
 BitmapInfoHeader.h
 /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 Rgb.h
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
+BitmapFileHeader.h
+/home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
 
 /home/viktor/CLionProjects/bmp_processing/inversion2.h
 bits/types/FILE.h

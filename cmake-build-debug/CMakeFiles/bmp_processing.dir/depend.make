@@ -13,6 +13,7 @@ CMakeFiles/bmp_processing.dir/cropping.c.o: ../cropping.c
 CMakeFiles/bmp_processing.dir/cropping.c.o: ../cropping.h
 CMakeFiles/bmp_processing.dir/cropping.c.o: ../validCoorFirst.h
 
+CMakeFiles/bmp_processing.dir/drawLine.c.o: ../BitmapFileHeader.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../angle.h
@@ -20,6 +21,7 @@ CMakeFiles/bmp_processing.dir/drawLine.c.o: ../drawLine.c
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../drawLine.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o: ../validCoorFirst.h
 
+CMakeFiles/bmp_processing.dir/inversion1.c.o: ../BitmapFileHeader.h
 CMakeFiles/bmp_processing.dir/inversion1.c.o: ../BitmapInfoHeader.h
 CMakeFiles/bmp_processing.dir/inversion1.c.o: ../Rgb.h
 CMakeFiles/bmp_processing.dir/inversion1.c.o: ../drawLine.h

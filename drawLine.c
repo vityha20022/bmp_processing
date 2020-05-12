@@ -4,11 +4,22 @@
 #include <string.h>
 #include "angle.h"
 #include "BitmapInfoHeader.h"
+#include "stdio.h"
 
-void drawLine(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, char* color, int
-thickness){
+void drawLine(int x1, int y1, int x2, int y2, Rgb **arr, char* color, int
+thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
     int deltaT = 1;
     validCoorFirst(&x1, &y1, &x2, &y2, bmih);
+    int W = 0;
+    if ((int)bmih -> width * sizeof(Rgb) % 4 != 0){
+        W = ((int)bmih -> width * sizeof(Rgb) + (4 - ((int)bmih -> width * 3) % 4));
+    } else {
+        W = (int)bmih -> width * sizeof(Rgb);
+    }
+    for (int k = 0; k < bmih -> height; k++){
+        arr[k] = malloc(W);
+        fread(arr[k],1, W, f);
+    }
     const int x_1 = x1, x_2 = x2, y_1 = y1, y_2 = y2;
     if(angle(x1, y1, x2, y2, bmih) <= 135 && angle(x1, y1, x2, y2, bmih) >= 45){
         while(thickness != 0){
@@ -143,6 +154,20 @@ thickness){
 
         }
     }
+    FILE *out_file = fopen("out.bmp", "wb");
+    fwrite(bmfh, 1, sizeof(BitmapFileHeader),out_file);
+    fwrite(bmih, 1, sizeof(BitmapInfoHeader), out_file);
+    for (int i = 0; i < bmih -> height; i++){
+        fwrite(arr[i], 1,W, out_file);
+    }
+    fclose(f);
+    for (int k = 0; k < bmih -> height; k++){
+        free(arr[k]);
+    }
+    f = fopen("out.bmp", "rb");
+    fread(bmfh,1,sizeof(BitmapFileHeader),f);
+    fread(bmih, 1, sizeof(BitmapInfoHeader), f);
+    fclose(out_file);
 
 
 

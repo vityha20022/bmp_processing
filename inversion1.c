@@ -1,9 +1,21 @@
 #include "inversion1.h"
 #include "validCoorSecond.h"
 #include "drawLine.h"
+#include "stdlib.h"
+#include "stdio.h"
 
-void inversion1(int x0, int y0, int radius, Rgb **arr, BitmapInfoHeader *bmih){
+void inversion1(int x0, int y0, int radius, Rgb **arr, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
     validCoorSecond(&x0, &y0, bmih);
+    int W = 0;
+    if ((int)bmih -> width * sizeof(Rgb) % 4 != 0){
+        W = ((int)bmih -> width * sizeof(Rgb) + (4 - ((int)bmih -> width * 3) % 4));
+    } else {
+        W = (int)bmih -> width * sizeof(Rgb);
+    }
+    for (int k = 0; k < bmih -> height; k++){
+        arr[k] = malloc(W);
+        fread(arr[k],1, W, f);
+    }
     int dx = 0;
     int dy = 0;
     int square_coord_x = x0 - radius;
@@ -23,6 +35,20 @@ void inversion1(int x0, int y0, int radius, Rgb **arr, BitmapInfoHeader *bmih){
         square_coord_y = y0 - radius;
         square_coord_x++;
     }
+    FILE *out_file = fopen("out.bmp", "wb");
+    fwrite(bmfh, 1, sizeof(BitmapFileHeader),out_file);
+    fwrite(bmih, 1, sizeof(BitmapInfoHeader), out_file);
+    for (int i = 0; i < bmih -> height; i++){
+        fwrite(arr[i], 1,W, out_file);
+    }
+    fclose(f);
+    for (int k = 0; k < bmih -> height; k++){
+        free(arr[k]);
+    }
+    f = fopen("out.bmp", "rb");
+    fread(bmfh,1,sizeof(BitmapFileHeader),f);
+    fread(bmih, 1, sizeof(BitmapInfoHeader), f);
+    fclose(out_file);
 
 
 }

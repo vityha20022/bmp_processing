@@ -14,6 +14,7 @@ CMakeFiles/bmp_processing.dir/cropping.c.o
  /home/viktor/CLionProjects/bmp_processing/cropping.h
  /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
 CMakeFiles/bmp_processing.dir/drawLine.c.o
+ /home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/Rgb.h
  /home/viktor/CLionProjects/bmp_processing/angle.h
@@ -21,6 +22,7 @@ CMakeFiles/bmp_processing.dir/drawLine.c.o
  /home/viktor/CLionProjects/bmp_processing/drawLine.h
  /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
 CMakeFiles/bmp_processing.dir/inversion1.c.o
+ /home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
  /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
  /home/viktor/CLionProjects/bmp_processing/Rgb.h
  /home/viktor/CLionProjects/bmp_processing/drawLine.h

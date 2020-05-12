@@ -33,7 +33,6 @@ void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih,
     }
     char* buf;
     for (int k = 0; k < y2; k++){
-        arr[k] = malloc(w3);
         buf = malloc(w3);
         fread(buf, 1, w3, f);
         free(buf);
@@ -50,13 +49,16 @@ void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih,
     FILE *out_file = fopen("out.bmp", "wb");
     bmih -> width = W;
     bmih -> height = H;
-    bmfh -> filesize = H * W;
+    bmfh -> filesize = (H * W * sizeof(Rgb)) + sizeof(BitmapFileHeader) + sizeof(BitmapInfoHeader);
     fwrite(bmfh, 1, sizeof(BitmapFileHeader),out_file);
     fwrite(bmih, 1, sizeof(BitmapInfoHeader), out_file);
     for (int i = 0; i < H; i++){
         fwrite(arr[i], 1,w1, out_file);
     }
     fclose(f);
+    for(int i = 0; i < H; i++){
+        free(arr[i]);
+    }
     f = fopen("out.bmp", "rb");
     fread(bmfh,1,sizeof(BitmapFileHeader),f);
     fread(bmih, 1, sizeof(BitmapInfoHeader), f);
