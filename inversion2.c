@@ -25,7 +25,7 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
     int y0 = y1 - radius;
 
     if (abs(dx) != abs(dy) || x1 > x2 || y2 > y1){
-        printf("you entered invalid coordinates\n");
+        printf("you entered invalid coordinates for function inversion2\n");
         return;
     }
     dx = 0;

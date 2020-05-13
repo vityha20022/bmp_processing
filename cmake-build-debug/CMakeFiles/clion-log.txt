@@ -1,4 +1,4 @@
 /snap/clion/112/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/viktor/CLionProjects/bmp_processing
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/viktor/CLionProjects/bmp_processing/cmake-build-debug
+-- Build files have been written to: /home/viktor/CLionProjects/bmp_processing
