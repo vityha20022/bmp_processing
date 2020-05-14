@@ -6,7 +6,7 @@
 void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih, BitmapFileHeader* bmfh, FILE *f){
     validCoorFirst(&x1, &y1, &x2, &y2, bmih);
     if (x1 >= x2 || y1 <= y2){
-        printf("you entered invalid coordinates");
+        printf("func crop: you entered invalid coordinates\n");
         return;
     }
     int w1 = 0;

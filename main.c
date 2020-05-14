@@ -24,15 +24,19 @@ int main(int argc, char** argv){
             image_index = i;
         }
     }
-    FILE *f = fopen(argv[image_index], "rb");
-    if (!f){
+    if (image_index == 0){
+        printf("you did not enter a file name");
+        return 0;
+    }
+    FILE *input_file = fopen(argv[image_index], "rb");
+    if (!input_file){
         printf("can't open file");
         return 0;
     }
     BitmapFileHeader bmfh;
     BitmapInfoHeader bmih;
-    fread(&bmfh,1,sizeof(BitmapFileHeader),f);
-    fread(&bmih, 1, sizeof(BitmapInfoHeader), f);
+    fread(&bmfh,1,sizeof(BitmapFileHeader), input_file);
+    fread(&bmih, 1, sizeof(BitmapInfoHeader), input_file);
     if (bmih.headerSize != 40 || bmih.bitsPerPixel != 24){
         printf("This BMP file format is not defined");
         return 0;
@@ -40,17 +44,21 @@ int main(int argc, char** argv){
     /*printFileHeader(bmfh);
     printInfoHeader(bmih);
     */
-
+    FILE *f = fopen(argv[image_index], "rb");
+    fread(&bmfh,1,sizeof(BitmapFileHeader),f);
+    fread(&bmih, 1, sizeof(BitmapInfoHeader), f);
+    fclose(input_file);
 
     Rgb **arr = calloc(bmih.height*sizeof(Rgb*), 1);
 
     char* color = "black";
     int opt;
-    char* opts = "l:i:I:?";
+    char* opts = "l:i:I:c:h?";
     struct option longOpts[] = {
             {"inv_1", required_argument, NULL, 'i'},
             {"inv_2", required_argument, NULL, 'i'},
             {"line", required_argument, NULL, 'l'},
+            {"crop", required_argument, NULL, 'c'},
             {NULL, 0, NULL, 0}
     };
     int longIndex;
@@ -67,15 +75,18 @@ int main(int argc, char** argv){
     typedef struct{
         int x1, y1, x2, y2;
     }inv2;
+    typedef struct{
+        int x1, y1, x2, y2;
+    }cr;
 
 
     DrawLine draw;
     inv1 inv_1;
     inv2 inv_2;
+    cr crop;
     char* endptr;
     int index;
-    char *arr_color[] = {"red", "green", "pink", "orange", "blue",
-                         "purple", "black", "white", "brown"};
+
     while(opt != -1){
         switch (opt) {
             case 'l':
@@ -84,108 +95,99 @@ int main(int argc, char** argv){
                 if (endptr == argv[index] + strlen(argv[index])) {
                     draw.x1 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument x1 should be type int");
-                    return 0;
+                    printf("func line: the argument x1 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf("func line: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     draw.y1 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument y1 should be type int");
-                    return 0;
+                    printf("func line: the argument y1 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf("func line: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     draw.x2 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument x2 should be type int");
-                    return 0;
+                    printf("func line: the argument x2 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf("func line: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     draw.y2 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument y2 should be type int");
-                    return 0;
+                    printf("func line: the argument y2 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf("func line: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     draw.thickness = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument thickness should be type int");
-                    return 0;
+                    printf("func line: the argument thickness should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf( "func line: arguments are not enough\n");
+                    break;
                 }
                 draw.color = argv[index];
-                int color = 0;
-                for (int i = 0; i < 9; i++) {
-                    if (!strcmp(arr_color[i], draw.color)){
-                        color = 1;
-                    }
-                }
-                if (!color){
-                    fprintf(stderr, "this color is not in the color list");
-                    return 0;
-                }
                 drawLine(draw.x1, draw.y1, draw.x2, draw.y2, arr, draw.color, draw.thickness, &bmih, &bmfh, f);
                 optind = index - 1;
                 break;
+
             case 'i':
                 index = optind - 1;
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])){
                     inv_1.x0 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument x0 should be type int");
-                    return 0;
+                    printf("func inv_1: the argument x0 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf( "func inv_1: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     inv_1.y0 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument y0 should be type int");
-                    return 0;
+                    printf("func inv_1: the argument y0 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf( "func inv_1: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     inv_1.radius = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument radius should be type int");
-                    return 0;
+                    printf("func inv_1: the argument radius should be type int\n");
+                    break;
                 }
                 inversion1(inv_1.x0, inv_1.y0, inv_1.radius, arr, &bmih, &bmfh, f);
                 optind = index - 1;
@@ -197,61 +199,116 @@ int main(int argc, char** argv){
                 if (endptr == argv[index] + strlen(argv[index])) {
                     inv_2.x1 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument x1 should be type int");
-                    return 0;
+                    printf("func inv_2: the argument x1 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf("func inv_2: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     inv_2.y1 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument y1 should be type int");
-                    return 0;
+                    printf("func inv_2: the argument y1 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf("func inv_2: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     inv_2.x2 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument x2 should be type int");
-                    return 0;
+                    printf("func inv_2: the argument x2 should be type int\n");
+                    break;
                 }
                 index++;
                 if (index >= argc){
-                    fprintf(stderr, "arguments are not enough");
-                    return 0;
+                    printf("func inv_2: arguments are not enough\n");
+                    break;
                 }
                 strtol(argv[index], &endptr, 10);
                 if (endptr == argv[index] + strlen(argv[index])) {
                     inv_2.y2 = atoi(argv[index]);
                 } else {
-                    fprintf(stderr, "the argument y2 should be type int");
-                    return 0;
+                    printf("func inv_2: the argument y2 should be type int\n");
+                    break;
                 }
                 inversion2(inv_2.x1, inv_2.y1, inv_2.x2, inv_2.y2, arr, &bmih, &bmfh, f);
                 optind = index - 1;
                 break;
 
+            case 'c':
+                index = optind - 1;
+                strtol(argv[index], &endptr, 10);
+                if (endptr == argv[index] + strlen(argv[index])) {
+                    crop.x1 = atoi(argv[index]);
+                } else {
+                    printf("func crop: the argument x1 should be type int\n");
+                    break;
+                }
+                index++;
+                if (index >= argc){
+                    printf("func crop: arguments are not enough\n");
+                    break;
+                }
+                strtol(argv[index], &endptr, 10);
+                if (endptr == argv[index] + strlen(argv[index])) {
+                    crop.y1 = atoi(argv[index]);
+                } else {
+                    printf("func crop: the argument y1 should be type int\n");
+                    break;
+                }
+                index++;
+                if (index >= argc){
+                    printf("func crop: arguments are not enough\n");
+                    break;
+                }
+                strtol(argv[index], &endptr, 10);
+                if (endptr == argv[index] + strlen(argv[index])) {
+                    crop.x2 = atoi(argv[index]);
+                } else {
+                    printf("func crop: the argument x2 should be type int\n");
+                    break;
+                }
+                index++;
+                if (index >= argc){
+                    printf("func crop: arguments are not enough\n");
+                    break;
+                }
+                strtol(argv[index], &endptr, 10);
+                if (endptr == argv[index] + strlen(argv[index])) {
+                    crop.y2 = atoi(argv[index]);
+                } else {
+                    printf("func crop: the argument y2 should be type int\n");
+                    break;
+                }
+                cropping(crop.x1, crop.y1, crop.x2, crop.y2, arr, &bmih, &bmfh, f);
+                optind = index - 1;
+                break;
 
-
-
+            case 'h':
             case '?':
-                printf("\nWHAAAAAAAAAAAT????\n");
+                printf("    BMP_PROCESSING PROGRAM    \n");
+                printf("1) --line-l - arguments: x1 y1 x2 y2 thickness color\n");
+                printf("COLOR LIST: [red, green, pink, orange, blue, purple, black, white, brown]\n");
+                printf("2) --inv_1-i - arguments: x0 y0 radius\n");
+                printf("3) --inv_2-I - arguments: x1 y1 x2 y2\n");
+                printf("4) --crop-c - arguments: x1 y1 x2 y2\n");
+                printf("5) --help-h - program manual\n");
+                printf("6) --about_1-a - input file information\n");
+                printf("7) --about_2-A - output file information\n");
+                printf("8) --name_out-n - arguments: name output file\n");
+
                 break;
         }
         opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
     }
-    for(int k = 0; k < argc; k++){
-        printf("[%s]\n", argv[k]);
-    }
+
 
 
 

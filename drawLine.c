@@ -44,10 +44,16 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
                                    {255, 255, 255},
                                    {42,  42,  165}};
 
+            int color_on = 0;
             for (int i = 0; i < 9; i++) {
                 if (!strcmp(arr_color[i], color)) {
                     cur = rgb_arr_color[i];
+                    color_on = 1;
                 }
+            }
+            if (!color_on){
+                printf("func line: this color is not in the color list!\n");
+                return;
             }
             if(x2 < (int)bmih -> width && x2 >= 0 && y2 >= 0 && y2 < (int)bmih -> height){
                 arr[y2][x2] = cur;
@@ -111,10 +117,16 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
                                    {255, 255, 255},
                                    {42,  42,  165}};
 
+            int color_on = 0;
             for (int i = 0; i < 9; i++) {
                 if (!strcmp(arr_color[i], color)) {
                     cur = rgb_arr_color[i];
+                    color_on = 1;
                 }
+            }
+            if (!color_on){
+                printf("func line: this color is not in the color list!\n");
+                return;
             }
             if(x2 < (int)bmih -> width && x2 >= 0 && y2 >= 0 && y2 < (int)bmih -> height){
                 arr[y2][x2] = cur;
