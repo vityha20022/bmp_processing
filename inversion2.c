@@ -1,11 +1,10 @@
 #include "inversion2.h"
-#include "validCoorSecond.h"
 #include "stdio.h"
 #include "inversion1.h"
 #include "stdlib.h"
 
 
-void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
+void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f, char *name_out){
     int W = 0;
     if ((int)bmih -> width * sizeof(Rgb) % 4 != 0){
         W = ((int)bmih -> width * sizeof(Rgb) + (4 - ((int)bmih -> width * 3) % 4));
@@ -47,7 +46,7 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
         square_coord_y = y0 - radius;
         square_coord_x++;
     }
-    FILE *out_file = fopen("out.bmp", "wb");
+    FILE *out_file = fopen(name_out, "wb");
     fwrite(bmfh, 1, sizeof(BitmapFileHeader),out_file);
     fwrite(bmih, 1, sizeof(BitmapInfoHeader), out_file);
     for (int i = 0; i < bmih -> height; i++){
@@ -57,7 +56,7 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
     for (int k = 0; k < bmih -> height; k++){
         free(arr[k]);
     }
-    f = fopen("out.bmp", "rb");
+    f = fopen(name_out, "rb");
     fread(bmfh,1,sizeof(BitmapFileHeader),f);
     fread(bmih, 1, sizeof(BitmapInfoHeader), f);
     fclose(out_file);

@@ -4,8 +4,6 @@
 #include "BitmapFileHeader.h"
 #include "Rgb.h"
 #include "validCoorFirst.h"
-#include "printFileHeader.h"
-#include "printInfoHeader.h"
 #include "angle.h"
 #include "drawLine.h"
 #include "inversion1.h"
@@ -13,21 +11,31 @@
 #include "cropping.h"
 #include "getopt.h"
 #include "string.h"
+#include "PrintHelp.h"
 
 
 
 
 int main(int argc, char** argv){
+    if (argc == 1){
+        PrintHelp();
+        return 0;
+    }
+    int bmp_check = 0;
     int image_index = 0;
     for (int i = 0; i < argc; i++){
-        if (strstr(argv[i], ".bmp")){
-            image_index = i;
+        if (strstr(argv[i], ".bmp") && strcmp(argv[i - 1], "--name_out") && strcmp(argv[i - 1], "-n")){
+            bmp_check = (int)(strstr(argv[i], ".bmp") - argv[i]) + 4;
+            if (*(argv[i] + bmp_check) == 0){
+                image_index = i;
+            }
         }
     }
     if (image_index == 0){
-        printf("you did not enter a file name");
+        printf("you did not enter a file name\n");
         return 0;
     }
+    char *name_out_file = "out.bmp";
     FILE *input_file = fopen(argv[image_index], "rb");
     if (!input_file){
         printf("can't open file");
@@ -38,12 +46,9 @@ int main(int argc, char** argv){
     fread(&bmfh,1,sizeof(BitmapFileHeader), input_file);
     fread(&bmih, 1, sizeof(BitmapInfoHeader), input_file);
     if (bmih.headerSize != 40 || bmih.bitsPerPixel != 24){
-        printf("This BMP file format is not defined");
+        printf("This BMP file format is not defined\n");
         return 0;
     }
-    /*printFileHeader(bmfh);
-    printInfoHeader(bmih);
-    */
     FILE *f = fopen(argv[image_index], "rb");
     fread(&bmfh,1,sizeof(BitmapFileHeader),f);
     fread(&bmih, 1, sizeof(BitmapInfoHeader), f);
@@ -51,14 +56,15 @@ int main(int argc, char** argv){
 
     Rgb **arr = calloc(bmih.height*sizeof(Rgb*), 1);
 
-    char* color = "black";
     int opt;
-    char* opts = "l:i:I:c:h?";
+    char* opts = "l:i:I:c:n:ah?";
     struct option longOpts[] = {
             {"inv_1", required_argument, NULL, 'i'},
             {"inv_2", required_argument, NULL, 'i'},
             {"line", required_argument, NULL, 'l'},
             {"crop", required_argument, NULL, 'c'},
+            {"about", no_argument, NULL, 'a'},
+            {"name_out", required_argument, NULL, 'n'},
             {NULL, 0, NULL, 0}
     };
     int longIndex;
@@ -78,6 +84,7 @@ int main(int argc, char** argv){
     typedef struct{
         int x1, y1, x2, y2;
     }cr;
+
 
 
     DrawLine draw;
@@ -152,7 +159,7 @@ int main(int argc, char** argv){
                     break;
                 }
                 draw.color = argv[index];
-                drawLine(draw.x1, draw.y1, draw.x2, draw.y2, arr, draw.color, draw.thickness, &bmih, &bmfh, f);
+                drawLine(draw.x1, draw.y1, draw.x2, draw.y2, arr, draw.color, draw.thickness, &bmih, &bmfh, f, name_out_file);
                 optind = index - 1;
                 break;
 
@@ -189,7 +196,7 @@ int main(int argc, char** argv){
                     printf("func inv_1: the argument radius should be type int\n");
                     break;
                 }
-                inversion1(inv_1.x0, inv_1.y0, inv_1.radius, arr, &bmih, &bmfh, f);
+                inversion1(inv_1.x0, inv_1.y0, inv_1.radius, arr, &bmih, &bmfh, f, name_out_file);
                 optind = index - 1;
                 break;
 
@@ -238,22 +245,22 @@ int main(int argc, char** argv){
                     printf("func inv_2: the argument y2 should be type int\n");
                     break;
                 }
-                inversion2(inv_2.x1, inv_2.y1, inv_2.x2, inv_2.y2, arr, &bmih, &bmfh, f);
+                inversion2(inv_2.x1, inv_2.y1, inv_2.x2, inv_2.y2, arr, &bmih, &bmfh, f, name_out_file);
                 optind = index - 1;
                 break;
 
             case 'c':
-                index = optind - 1;
-                strtol(argv[index], &endptr, 10);
-                if (endptr == argv[index] + strlen(argv[index])) {
+                index = optind - 1; // индекс первого считываемого аргумента
+                strtol(argv[index], &endptr, 10); //преобразование аргумента к целому числу и проверка удалось ли
+                if (endptr == argv[index] + strlen(argv[index])) {//преобразовать
                     crop.x1 = atoi(argv[index]);
                 } else {
-                    printf("func crop: the argument x1 should be type int\n");
+                    printf("func crop: the argument x1 should be type int\n");// если не удалось выкидываем ошибку
                     break;
-                }
-                index++;
+                } //закончил проверку
+                index++; //переходим к след аргументу
                 if (index >= argc){
-                    printf("func crop: arguments are not enough\n");
+                    printf("func crop: arguments are not enough\n"); // если следующего аргумента нет выкидываем ошибку
                     break;
                 }
                 strtol(argv[index], &endptr, 10);
@@ -287,23 +294,22 @@ int main(int argc, char** argv){
                     printf("func crop: the argument y2 should be type int\n");
                     break;
                 }
-                cropping(crop.x1, crop.y1, crop.x2, crop.y2, arr, &bmih, &bmfh, f);
+                cropping(crop.x1, crop.y1, crop.x2, crop.y2, arr, &bmih, &bmfh, f, name_out_file);
                 optind = index - 1;
                 break;
 
+            case 'a':
+                printf("Width: %d pixels\n", bmih.width);
+                printf("Height: %d pixels\n", bmih.height);
+                printf("File size: %d bytes\n\n", bmfh.filesize);
+                break;
+            case 'n':
+                rename(name_out_file, optarg);
+                name_out_file = optarg;
+                break;
             case 'h':
             case '?':
-                printf("    BMP_PROCESSING PROGRAM    \n");
-                printf("1) --line-l - arguments: x1 y1 x2 y2 thickness color\n");
-                printf("COLOR LIST: [red, green, pink, orange, blue, purple, black, white, brown]\n");
-                printf("2) --inv_1-i - arguments: x0 y0 radius\n");
-                printf("3) --inv_2-I - arguments: x1 y1 x2 y2\n");
-                printf("4) --crop-c - arguments: x1 y1 x2 y2\n");
-                printf("5) --help-h - program manual\n");
-                printf("6) --about_1-a - input file information\n");
-                printf("7) --about_2-A - output file information\n");
-                printf("8) --name_out-n - arguments: name output file\n");
-
+                PrintHelp();
                 break;
         }
         opt = getopt_long(argc, argv, opts, longOpts, &longIndex);

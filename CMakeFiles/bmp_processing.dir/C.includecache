@@ -10,6 +10,8 @@
 
 /home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
 
+/home/viktor/CLionProjects/bmp_processing/PrintHelp.h
+
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
 
 /home/viktor/CLionProjects/bmp_processing/angle.h
@@ -69,10 +71,6 @@ Rgb.h
 /home/viktor/CLionProjects/bmp_processing/Rgb.h
 validCoorFirst.h
 /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
-printFileHeader.h
-/home/viktor/CLionProjects/bmp_processing/printFileHeader.h
-printInfoHeader.h
-/home/viktor/CLionProjects/bmp_processing/printInfoHeader.h
 angle.h
 /home/viktor/CLionProjects/bmp_processing/angle.h
 drawLine.h
@@ -87,14 +85,8 @@ getopt.h
 /home/viktor/CLionProjects/bmp_processing/getopt.h
 string.h
 /home/viktor/CLionProjects/bmp_processing/string.h
-
-/home/viktor/CLionProjects/bmp_processing/printFileHeader.h
-BitmapFileHeader.h
-/home/viktor/CLionProjects/bmp_processing/BitmapFileHeader.h
-
-/home/viktor/CLionProjects/bmp_processing/printInfoHeader.h
-BitmapInfoHeader.h
-/home/viktor/CLionProjects/bmp_processing/BitmapInfoHeader.h
+PrintHelp.h
+/home/viktor/CLionProjects/bmp_processing/PrintHelp.h
 
 /home/viktor/CLionProjects/bmp_processing/validCoorFirst.h
 BitmapInfoHeader.h

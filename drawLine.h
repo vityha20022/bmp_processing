@@ -4,4 +4,4 @@
 #include "BitmapFileHeader.h"
 
 void drawLine(int x1, int y1, int x2, int y2, Rgb **arr, char* color, int
-thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE* f);
+thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE* f, char* name_out);

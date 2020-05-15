@@ -4,6 +4,6 @@
 #include "BitmapFileHeader.h"
 
 
-void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f);
+void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f, char *name_out);
 
 

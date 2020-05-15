@@ -4,16 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/viktor/CLionProjects/bmp_processing/PrintHelp.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/PrintHelp.c.o"
   "/home/viktor/CLionProjects/bmp_processing/angle.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/angle.c.o"
   "/home/viktor/CLionProjects/bmp_processing/cropping.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/cropping.c.o"
   "/home/viktor/CLionProjects/bmp_processing/drawLine.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/drawLine.c.o"
   "/home/viktor/CLionProjects/bmp_processing/inversion1.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/inversion1.c.o"
   "/home/viktor/CLionProjects/bmp_processing/inversion2.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/inversion2.c.o"
   "/home/viktor/CLionProjects/bmp_processing/main.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/main.c.o"
-  "/home/viktor/CLionProjects/bmp_processing/printFileHeader.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/printFileHeader.c.o"
-  "/home/viktor/CLionProjects/bmp_processing/printInfoHeader.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/printInfoHeader.c.o"
   "/home/viktor/CLionProjects/bmp_processing/validCoorFirst.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/validCoorFirst.c.o"
-  "/home/viktor/CLionProjects/bmp_processing/validCoorSecond.c" "/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir/validCoorSecond.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -7,7 +7,7 @@
 #include "stdio.h"
 
 void drawLine(int x1, int y1, int x2, int y2, Rgb **arr, char* color, int
-thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
+thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f, char* name_out){
     int deltaT = 1;
     y1 = (int)(bmih -> height - 1) - y1;
     y2 = (int)(bmih -> height - 1) - y2;
@@ -33,7 +33,7 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
             //
             Rgb cur;
             char *arr_color[] = {"red", "green", "pink", "orange", "blue",
-                                 "purple", "black", "white", "brown"};
+                                 "purple", "black", "white", "brown", "yellow"};
             Rgb rgb_arr_color[] = {{0,   0,   255},
                                    {0,   128, 0},
                                    {203, 192, 255},
@@ -42,10 +42,11 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
                                    {128, 0,   128},
                                    {0,   0,   0},
                                    {255, 255, 255},
-                                   {42,  42,  165}};
+                                   {42,  42,  165},
+                                   {0, 255, 255}};
 
             int color_on = 0;
-            for (int i = 0; i < 9; i++) {
+            for (int i = 0; i < 10; i++) {
                 if (!strcmp(arr_color[i], color)) {
                     cur = rgb_arr_color[i];
                     color_on = 1;
@@ -106,7 +107,7 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
             //
             Rgb cur;
             char *arr_color[] = {"red", "green", "pink", "orange", "blue",
-                                 "purple", "black", "white", "brown"};
+                                 "purple", "black", "white", "brown", "yellow"};
             Rgb rgb_arr_color[] = {{0,   0,   255},
                                    {0,   128, 0},
                                    {203, 192, 255},
@@ -115,10 +116,11 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
                                    {128, 0,   128},
                                    {0,   0,   0},
                                    {255, 255, 255},
-                                   {42,  42,  165}};
+                                   {42,  42,  165},
+                                   {0, 255, 255}};
 
             int color_on = 0;
-            for (int i = 0; i < 9; i++) {
+            for (int i = 0; i < 10; i++) {
                 if (!strcmp(arr_color[i], color)) {
                     cur = rgb_arr_color[i];
                     color_on = 1;
@@ -167,7 +169,7 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
 
         }
     }
-    FILE *out_file = fopen("out.bmp", "wb");
+    FILE *out_file = fopen(name_out, "wb");
     fwrite(bmfh, 1, sizeof(BitmapFileHeader),out_file);
     fwrite(bmih, 1, sizeof(BitmapInfoHeader), out_file);
     for (int i = 0; i < bmih -> height; i++){
@@ -177,7 +179,7 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f){
     for (int k = 0; k < bmih -> height; k++){
         free(arr[k]);
     }
-    f = fopen("out.bmp", "rb");
+    f = fopen(name_out, "rb");
     fread(bmfh,1,sizeof(BitmapFileHeader),f);
     fread(bmih, 1, sizeof(BitmapInfoHeader), f);
     fclose(out_file);

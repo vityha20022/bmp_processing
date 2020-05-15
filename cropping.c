@@ -3,7 +3,7 @@
 #include "validCoorFirst.h"
 #include "stdlib.h"
 
-void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih, BitmapFileHeader* bmfh, FILE *f){
+void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih, BitmapFileHeader* bmfh, FILE *f, char *name_out){
     validCoorFirst(&x1, &y1, &x2, &y2, bmih);
     if (x1 >= x2 || y1 <= y2){
         printf("func crop: you entered invalid coordinates\n");
@@ -45,7 +45,7 @@ void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih,
     }
 
 
-    FILE *out_file = fopen("out.bmp", "wb");
+    FILE *out_file = fopen(name_out, "wb");
     bmih -> width = W;
     bmih -> height = H;
     bmfh -> filesize = (H * W * sizeof(Rgb)) + sizeof(BitmapFileHeader) + sizeof(BitmapInfoHeader);
@@ -58,17 +58,9 @@ void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih,
     for(int i = 0; i < H; i++){
         free(arr[i]);
     }
-    f = fopen("out.bmp", "rb");
+    f = fopen(name_out, "rb");
     fread(bmfh,1,sizeof(BitmapFileHeader),f);
     fread(bmih, 1, sizeof(BitmapInfoHeader), f);
     fclose(out_file);
-
-
-
-
-
-
-
-
 
 }

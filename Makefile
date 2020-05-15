@@ -123,6 +123,33 @@ bmp_processing/fast:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/build
 .PHONY : bmp_processing/fast
 
+PrintHelp.o: PrintHelp.c.o
+
+.PHONY : PrintHelp.o
+
+# target to build an object file
+PrintHelp.c.o:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/PrintHelp.c.o
+.PHONY : PrintHelp.c.o
+
+PrintHelp.i: PrintHelp.c.i
+
+.PHONY : PrintHelp.i
+
+# target to preprocess a source file
+PrintHelp.c.i:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/PrintHelp.c.i
+.PHONY : PrintHelp.c.i
+
+PrintHelp.s: PrintHelp.c.s
+
+.PHONY : PrintHelp.s
+
+# target to generate assembly for a file
+PrintHelp.c.s:
+	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/PrintHelp.c.s
+.PHONY : PrintHelp.c.s
+
 angle.o: angle.c.o
 
 .PHONY : angle.o
@@ -285,60 +312,6 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/main.c.s
 .PHONY : main.c.s
 
-printFileHeader.o: printFileHeader.c.o
-
-.PHONY : printFileHeader.o
-
-# target to build an object file
-printFileHeader.c.o:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printFileHeader.c.o
-.PHONY : printFileHeader.c.o
-
-printFileHeader.i: printFileHeader.c.i
-
-.PHONY : printFileHeader.i
-
-# target to preprocess a source file
-printFileHeader.c.i:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printFileHeader.c.i
-.PHONY : printFileHeader.c.i
-
-printFileHeader.s: printFileHeader.c.s
-
-.PHONY : printFileHeader.s
-
-# target to generate assembly for a file
-printFileHeader.c.s:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printFileHeader.c.s
-.PHONY : printFileHeader.c.s
-
-printInfoHeader.o: printInfoHeader.c.o
-
-.PHONY : printInfoHeader.o
-
-# target to build an object file
-printInfoHeader.c.o:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printInfoHeader.c.o
-.PHONY : printInfoHeader.c.o
-
-printInfoHeader.i: printInfoHeader.c.i
-
-.PHONY : printInfoHeader.i
-
-# target to preprocess a source file
-printInfoHeader.c.i:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printInfoHeader.c.i
-.PHONY : printInfoHeader.c.i
-
-printInfoHeader.s: printInfoHeader.c.s
-
-.PHONY : printInfoHeader.s
-
-# target to generate assembly for a file
-printInfoHeader.c.s:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/printInfoHeader.c.s
-.PHONY : printInfoHeader.c.s
-
 validCoorFirst.o: validCoorFirst.c.o
 
 .PHONY : validCoorFirst.o
@@ -366,33 +339,6 @@ validCoorFirst.c.s:
 	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorFirst.c.s
 .PHONY : validCoorFirst.c.s
 
-validCoorSecond.o: validCoorSecond.c.o
-
-.PHONY : validCoorSecond.o
-
-# target to build an object file
-validCoorSecond.c.o:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorSecond.c.o
-.PHONY : validCoorSecond.c.o
-
-validCoorSecond.i: validCoorSecond.c.i
-
-.PHONY : validCoorSecond.i
-
-# target to preprocess a source file
-validCoorSecond.c.i:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorSecond.c.i
-.PHONY : validCoorSecond.c.i
-
-validCoorSecond.s: validCoorSecond.c.s
-
-.PHONY : validCoorSecond.s
-
-# target to generate assembly for a file
-validCoorSecond.c.s:
-	$(MAKE) -f CMakeFiles/bmp_processing.dir/build.make CMakeFiles/bmp_processing.dir/validCoorSecond.c.s
-.PHONY : validCoorSecond.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -402,6 +348,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bmp_processing"
+	@echo "... PrintHelp.o"
+	@echo "... PrintHelp.i"
+	@echo "... PrintHelp.s"
 	@echo "... angle.o"
 	@echo "... angle.i"
 	@echo "... angle.s"
@@ -420,18 +369,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... printFileHeader.o"
-	@echo "... printFileHeader.i"
-	@echo "... printFileHeader.s"
-	@echo "... printInfoHeader.o"
-	@echo "... printInfoHeader.i"
-	@echo "... printInfoHeader.s"
 	@echo "... validCoorFirst.o"
 	@echo "... validCoorFirst.i"
 	@echo "... validCoorFirst.s"
-	@echo "... validCoorSecond.o"
-	@echo "... validCoorSecond.i"
-	@echo "... validCoorSecond.s"
 .PHONY : help
 
 
