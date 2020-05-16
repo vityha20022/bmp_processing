@@ -25,6 +25,10 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
 
     if (abs(dx) != abs(dy) || x1 > x2 || y2 > y1){
         printf("func inv_2: you entered invalid coordinates\n");
+        for (int k = 0; k < bmih -> height; k++){
+            free(arr[k]);
+        }
+        fseek(f,54,SEEK_SET);
         return;
     }
     dx = 0;

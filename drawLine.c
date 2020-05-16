@@ -54,6 +54,10 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f, char* name_o
             }
             if (!color_on){
                 printf("func line: this color is not in the color list!\n");
+                for (int k = 0; k < bmih -> height; k++){
+                    free(arr[k]);
+                }
+                fseek(f,54,SEEK_SET);
                 return;
             }
             if(x2 < (int)bmih -> width && x2 >= 0 && y2 >= 0 && y2 < (int)bmih -> height){
@@ -128,6 +132,11 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f, char* name_o
             }
             if (!color_on){
                 printf("func line: this color is not in the color list!\n");
+                for (int k = 0; k < bmih -> height; k++){
+                    free(arr[k]);
+                }
+                fseek(f, 54, SEEK_SET);
+
                 return;
             }
             if(x2 < (int)bmih -> width && x2 >= 0 && y2 >= 0 && y2 < (int)bmih -> height){

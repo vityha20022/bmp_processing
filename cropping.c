@@ -5,10 +5,6 @@
 
 void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih, BitmapFileHeader* bmfh, FILE *f, char *name_out){
     validCoorFirst(&x1, &y1, &x2, &y2, bmih);
-    if (x1 >= x2 || y1 <= y2){
-        printf("func crop: you entered invalid coordinates\n");
-        return;
-    }
     int w1 = 0;
     if ((x2 - x1) * sizeof(Rgb) % 4 != 0) {
         w1 = (x2 - x1) * sizeof(Rgb) + (4 - (((x2 - x1) * 3) % 4));
@@ -30,12 +26,19 @@ void cropping(int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader* bmih,
     } else{
         w3 = (int)bmih -> width * sizeof(Rgb);
     }
+
+    if (x1 >= x2 || y1 <= y2){
+        printf("func crop: you entered invalid coordinates\n");
+        return;
+    }
+
     char* buf;
-    for (int k = 0; k < y2; k++){
+    /*for (int k = 0; k < y2; k++){
         buf = calloc(w3, 1);
         fread(buf, 1, w3, f);
         free(buf);
-    }
+    }*/
+    fseek(f, y2 * w3, SEEK_CUR);
     for(int i = 0; i < H; i++){
         arr[i] = calloc(w2, 1);
         buf = malloc(x1 * 3);

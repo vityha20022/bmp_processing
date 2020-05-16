@@ -60,7 +60,7 @@ int main(int argc, char** argv){
     char* opts = "l:i:I:c:n:ah?";
     struct option longOpts[] = {
             {"inv_1", required_argument, NULL, 'i'},
-            {"inv_2", required_argument, NULL, 'i'},
+            {"inv_2", required_argument, NULL, 'I'},
             {"line", required_argument, NULL, 'l'},
             {"crop", required_argument, NULL, 'c'},
             {"about", no_argument, NULL, 'a'},
@@ -103,6 +103,7 @@ int main(int argc, char** argv){
                     draw.x1 = atoi(argv[index]);
                 } else {
                     printf("func line: the argument x1 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -115,6 +116,7 @@ int main(int argc, char** argv){
                     draw.y1 = atoi(argv[index]);
                 } else {
                     printf("func line: the argument y1 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -127,6 +129,7 @@ int main(int argc, char** argv){
                     draw.x2 = atoi(argv[index]);
                 } else {
                     printf("func line: the argument x2 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -139,6 +142,7 @@ int main(int argc, char** argv){
                     draw.y2 = atoi(argv[index]);
                 } else {
                     printf("func line: the argument y2 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -151,6 +155,7 @@ int main(int argc, char** argv){
                     draw.thickness = atoi(argv[index]);
                 } else {
                     printf("func line: the argument thickness should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -160,7 +165,7 @@ int main(int argc, char** argv){
                 }
                 draw.color = argv[index];
                 drawLine(draw.x1, draw.y1, draw.x2, draw.y2, arr, draw.color, draw.thickness, &bmih, &bmfh, f, name_out_file);
-                optind = index - 1;
+                optind = index;
                 break;
 
             case 'i':
@@ -320,7 +325,7 @@ int main(int argc, char** argv){
 
 
     //cropping(0, 0, 256, 256, arr, &bmih, &bmfh, f);
-
+    fclose(f);
     printf("\n");
     free(arr);
 
