@@ -13,14 +13,31 @@
 #include "string.h"
 #include "PrintHelp.h"
 
+typedef struct{
+    int x1, y1, x2, y2, thickness;
+    char* color;
+}DrawLine;
+
+typedef struct{
+    int x0, y0, radius;
+}inv1;
+
+typedef struct{
+    int x1, y1, x2, y2;
+}inv2;
+typedef struct{
+    int x1, y1, x2, y2;
+}cr;
 
 
 
 int main(int argc, char** argv){
+    // программу запустили без аргументов
     if (argc == 1){
         PrintHelp();
         return 0;
     }
+
     int bmp_check = 0;
     int image_index = 0;
     for (int i = 0; i < argc; i++){
@@ -69,23 +86,6 @@ int main(int argc, char** argv){
     };
     int longIndex;
     opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
-    typedef struct{
-        int x1, y1, x2, y2, thickness;
-        char* color;
-    }DrawLine;
-
-    typedef struct{
-        int x0, y0, radius;
-    }inv1;
-
-    typedef struct{
-        int x1, y1, x2, y2;
-    }inv2;
-    typedef struct{
-        int x1, y1, x2, y2;
-    }cr;
-
-
 
     DrawLine draw;
     inv1 inv_1;
@@ -175,6 +175,7 @@ int main(int argc, char** argv){
                     inv_1.x0 = atoi(argv[index]);
                 } else {
                     printf("func inv_1: the argument x0 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -187,6 +188,7 @@ int main(int argc, char** argv){
                     inv_1.y0 = atoi(argv[index]);
                 } else {
                     printf("func inv_1: the argument y0 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -199,10 +201,11 @@ int main(int argc, char** argv){
                     inv_1.radius = atoi(argv[index]);
                 } else {
                     printf("func inv_1: the argument radius should be type int\n");
+                    optind = index;
                     break;
                 }
                 inversion1(inv_1.x0, inv_1.y0, inv_1.radius, arr, &bmih, &bmfh, f, name_out_file);
-                optind = index - 1;
+                optind = index + 1;
                 break;
 
             case 'I':
@@ -212,6 +215,7 @@ int main(int argc, char** argv){
                     inv_2.x1 = atoi(argv[index]);
                 } else {
                     printf("func inv_2: the argument x1 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -224,6 +228,7 @@ int main(int argc, char** argv){
                     inv_2.y1 = atoi(argv[index]);
                 } else {
                     printf("func inv_2: the argument y1 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -236,6 +241,7 @@ int main(int argc, char** argv){
                     inv_2.x2 = atoi(argv[index]);
                 } else {
                     printf("func inv_2: the argument x2 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -248,24 +254,26 @@ int main(int argc, char** argv){
                     inv_2.y2 = atoi(argv[index]);
                 } else {
                     printf("func inv_2: the argument y2 should be type int\n");
+                    optind = index;
                     break;
                 }
                 inversion2(inv_2.x1, inv_2.y1, inv_2.x2, inv_2.y2, arr, &bmih, &bmfh, f, name_out_file);
-                optind = index - 1;
+                optind = index + 1;
                 break;
 
             case 'c':
-                index = optind - 1; // индекс первого считываемого аргумента
-                strtol(argv[index], &endptr, 10); //преобразование аргумента к целому числу и проверка удалось ли
-                if (endptr == argv[index] + strlen(argv[index])) {//преобразовать
+                index = optind - 1;
+                strtol(argv[index], &endptr, 10);
+                if (endptr == argv[index] + strlen(argv[index])) {
                     crop.x1 = atoi(argv[index]);
                 } else {
-                    printf("func crop: the argument x1 should be type int\n");// если не удалось выкидываем ошибку
+                    printf("func crop: the argument x1 should be type int\n");
+                    optind = index;
                     break;
-                } //закончил проверку
-                index++; //переходим к след аргументу
+                }
+                index++;
                 if (index >= argc){
-                    printf("func crop: arguments are not enough\n"); // если следующего аргумента нет выкидываем ошибку
+                    printf("func crop: arguments are not enough\n");
                     break;
                 }
                 strtol(argv[index], &endptr, 10);
@@ -273,6 +281,7 @@ int main(int argc, char** argv){
                     crop.y1 = atoi(argv[index]);
                 } else {
                     printf("func crop: the argument y1 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -285,6 +294,7 @@ int main(int argc, char** argv){
                     crop.x2 = atoi(argv[index]);
                 } else {
                     printf("func crop: the argument x2 should be type int\n");
+                    optind = index;
                     break;
                 }
                 index++;
@@ -297,10 +307,11 @@ int main(int argc, char** argv){
                     crop.y2 = atoi(argv[index]);
                 } else {
                     printf("func crop: the argument y2 should be type int\n");
+                    optind = index;
                     break;
                 }
                 cropping(crop.x1, crop.y1, crop.x2, crop.y2, arr, &bmih, &bmfh, f, name_out_file);
-                optind = index - 1;
+                optind = index + 1;
                 break;
 
             case 'a':
@@ -320,11 +331,6 @@ int main(int argc, char** argv){
         opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
     }
 
-
-
-
-
-    //cropping(0, 0, 256, 256, arr, &bmih, &bmfh, f);
     fclose(f);
     printf("\n");
     free(arr);

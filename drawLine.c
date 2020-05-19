@@ -8,19 +8,29 @@
 
 void drawLine(int x1, int y1, int x2, int y2, Rgb **arr, char* color, int
 thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f, char* name_out){
+    // переменная для реализации толщины
     int deltaT = 1;
+    // массив для заполнения выравнивания нулями
+    int array[1] = {0};
+    // валидация игрик координат
     y1 = (int)(bmih -> height - 1) - y1;
     y2 = (int)(bmih -> height - 1) - y2;
     int W = 0;
-    if ((int)bmih -> width * sizeof(Rgb) % 4 != 0){
-        W = ((int)bmih -> width * sizeof(Rgb) + (4 - ((int)bmih -> width * 3) % 4));
-    } else {
-        W = (int)bmih -> width * sizeof(Rgb);
-    }
+    // размер строки
+    W = (int)bmih -> width * sizeof(Rgb);
+    int W_Padding = 0;
+    // размер выравнивания
+    W_Padding = (4 - ((int)bmih -> width * 3) % 4);
     for (int k = 0; k < bmih -> height; k++){
         arr[k] = calloc(W, 1);
         fread(arr[k],1, W, f);
+        if (W % 4 != 0){
+            fseek(f, W_Padding, SEEK_CUR);
+        }
     }
+    // используем алгоритм Брезенхейма, толщину создаем рисоавнием параллельных линий
+
+
     const int x_1 = x1, x_2 = x2, y_1 = y1, y_2 = y2;
     if(angle(x1, y1, x2, y2, bmih) <= 135 && angle(x1, y1, x2, y2, bmih) >= 45){
         while(thickness != 0){
@@ -178,11 +188,15 @@ thickness, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f, char* name_o
 
         }
     }
+    // записываем измененный масссив в новый файл
     FILE *out_file = fopen(name_out, "wb");
     fwrite(bmfh, 1, sizeof(BitmapFileHeader),out_file);
     fwrite(bmih, 1, sizeof(BitmapInfoHeader), out_file);
     for (int i = 0; i < bmih -> height; i++){
         fwrite(arr[i], 1,W, out_file);
+        if (W % 4 != 0){
+            fwrite(array, 1, W_Padding, out_file);
+        }
     }
     fclose(f);
     for (int k = 0; k < bmih -> height; k++){

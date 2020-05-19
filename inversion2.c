@@ -5,16 +5,22 @@
 
 
 void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bmih, BitmapFileHeader *bmfh, FILE *f, char *name_out){
+    // массив для заполнения выравнивания нулями
+    int array[1] = {0};
     int W = 0;
-    if ((int)bmih -> width * sizeof(Rgb) % 4 != 0){
-        W = ((int)bmih -> width * sizeof(Rgb) + (4 - ((int)bmih -> width * 3) % 4));
-    } else {
-        W = (int)bmih -> width * sizeof(Rgb);
-    }
+    // размер строки
+    W = (int)bmih -> width * sizeof(Rgb);
+    int W_Padding = 0;
+    // размер выравнивания
+    W_Padding = (4 - ((int)bmih -> width * 3) % 4);
     for (int k = 0; k < bmih -> height; k++){
         arr[k] = calloc(W, 1);
         fread(arr[k],1, W, f);
+        if (W % 4 != 0){
+            fseek(f, W_Padding, SEEK_CUR);
+        }
     }
+    // валидация игрик координат
     y1 = (int)(bmih -> height - 1) - y1;
     y2 = (int)(bmih -> height - 1) - y2;
     int dx = x2 - x1;
@@ -33,8 +39,10 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
     }
     dx = 0;
     dy = 0;
+    // координаты квадрата в который вписана окружность
     int square_coord_x = x0 - radius;
     int square_coord_y = y0 + radius;
+    // проходимся по всему квадрату, если расстояние от точки до центра меньше радиуса - инвертируем
     for (int i = 0; i < 2 * radius; i++){
         for (int j = 0; j < 2 * radius; j++){
             dx = x0 - square_coord_x;
@@ -50,11 +58,15 @@ void inversion2 (int x1, int y1, int x2, int y2, Rgb **arr, BitmapInfoHeader *bm
         square_coord_y = y0 - radius;
         square_coord_x++;
     }
+    // записываем измененный массив в новый файл
     FILE *out_file = fopen(name_out, "wb");
     fwrite(bmfh, 1, sizeof(BitmapFileHeader),out_file);
     fwrite(bmih, 1, sizeof(BitmapInfoHeader), out_file);
     for (int i = 0; i < bmih -> height; i++){
         fwrite(arr[i], 1,W, out_file);
+        if (W % 4 != 0){
+            fwrite(array, 1, W_Padding, out_file);
+        }
     }
     fclose(f);
     for (int k = 0; k < bmih -> height; k++){
