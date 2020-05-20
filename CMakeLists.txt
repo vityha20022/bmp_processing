@@ -1,8 +1,0 @@
-cmake_minimum_required(VERSION 3.16)
-project(bmp_processing C)
-
-set(CMAKE_C_STANDARD 99)
-
-add_executable(bmp_processing main.c BitmapFileHeader.h Rgb.h BitmapInfoHeader.h validCoorFirst.c validCoorFirst.h angle.c angle.h drawLine.c drawLine.h inversion1.c inversion1.h inversion2.c inversion2.h cropping.c cropping.h PrintHelp.c PrintHelp.h)
-
-target_link_libraries(bmp_processing m)

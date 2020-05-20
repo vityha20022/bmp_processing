@@ -1,3 +1,0 @@
-/home/viktor/CLionProjects/bmp_processing/CMakeFiles/edit_cache.dir
-/home/viktor/CLionProjects/bmp_processing/CMakeFiles/rebuild_cache.dir
-/home/viktor/CLionProjects/bmp_processing/CMakeFiles/bmp_processing.dir
